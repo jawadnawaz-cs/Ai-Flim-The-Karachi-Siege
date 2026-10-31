@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Team · The Karachi Siege</title>
-  <meta name="description" content="The people who made The Karachi Siege." />
+  <title>Team & Credits · The Karachi Siege</title>
+  <meta name="description" content="The creative work and production roles behind The Karachi Siege AI film." />
+  <meta name="theme-color" content="#0b0c0f" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">The Karachi Siege</a>
+    <a class="brand" href="index.html">THE KARACHI SIEGE<span class="brand-mark">.</span></a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
+      <a href="index.html#cast">Cast</a>
+      <a href="storyboard.html">Storyboard</a>
+      <a href="prompts.html">Prompts</a>
       <a href="team.html" aria-current="page">Team</a>
     </nav>
   </header>
@@ -19,19 +23,48 @@
   <main>
     <section class="team" aria-labelledby="team-title">
       <div class="section-head reveal">
-        <p class="eyebrow">The people behind the film</p>
-        <h1 id="team-title">Team</h1>
+        <p class="eyebrow">The work behind the film</p>
+        <h1 id="team-title">Team & credits<span class="accent-dot">.</span></h1>
       </div>
-
-      <div class="team-grid" id="team-grid" aria-busy="true"></div>
+      <p class="page-intro">A film is more than its final frame. These are the creative and technical parts that brought The Karachi Siege together.</p>
+      <div class="team-grid">
+        <article class="member">
+          <div class="avatar" aria-hidden="true">01</div>
+          <h2>Story & direction</h2>
+          <p class="role">CREATIVE DEVELOPMENT</p>
+          <p class="bio">The original story, characters, dramatic structure and direction of the film.</p>
+        </article>
+        <article class="member">
+          <div class="avatar" aria-hidden="true">02</div>
+          <h2>AI visual production</h2>
+          <p class="role">IMAGE & VIDEO GENERATION</p>
+          <p class="bio">Character design, scene generation and visual continuity across the film.</p>
+        </article>
+        <article class="member">
+          <div class="avatar" aria-hidden="true">03</div>
+          <h2>Website & experience</h2>
+          <p class="role">DESIGN & DEVELOPMENT</p>
+          <p class="bio">The responsive website, interactive storyboard and organized prompt library.</p>
+        </article>
+        <article class="member">
+          <div class="avatar" aria-hidden="true">04</div>
+          <h2>Film assembly</h2>
+          <p class="role">EDITING & PRESENTATION</p>
+          <p class="bio">Bringing the generated scenes, sound and story together into the finished film experience.</p>
+        </article>
+      </div>
+      <div class="about project-note">
+        <div class="about-inner">
+          <p class="eyebrow">The project</p>
+          <p class="about-copy">The Karachi Siege is an AI-assisted film project set in Karachi, Pakistan. This website documents the finished film alongside its characters, storyboard and creative prompts.</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span>The Karachi Siege</span>
-    <span>AI film project</span>
+    <span>THE KARACHI SIEGE<span class="brand-mark">.</span></span>
+    <span>AN AI FILM PROJECT <span class="footer-separator">/</span> KARACHI, PAKISTAN</span>
   </footer>
-
-  <script type="module" src="team.js"></script>
 </body>
 </html>
