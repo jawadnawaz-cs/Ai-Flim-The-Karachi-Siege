@@ -16,9 +16,15 @@ document.querySelectorAll(".reveal").forEach((el, i) => {
   io.observe(el);
 });
 
-/* Hide the video shimmer once the player has loaded */
+/* Load the film only when the real storyboard still is activated. */
 const film = document.getElementById("film");
-const videoPlaceholder = document.querySelector(".video-placeholder");
-if (film && videoPlaceholder) {
-  film.addEventListener("load", () => videoPlaceholder.classList.add("is-hidden"));
+const filmPlay = document.getElementById("film-play");
+if (film && filmPlay) {
+  filmPlay.addEventListener("click", () => {
+    const source = film.dataset.src;
+    if (!source) return;
+    film.src = source + (source.includes("?") ? "&" : "?") + "autoplay=1";
+    filmPlay.hidden = true;
+    film.classList.add("is-playing");
+  }, { once: true });
 }
