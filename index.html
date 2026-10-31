@@ -3,42 +3,53 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Karachi Siege</title>
-  <meta name="description" content="The Karachi Siege, an AI film about a delivery rider, a phone, and a choice that changes a city." />
+  <title>The Karachi Siege — An AI Film</title>
+  <meta name="description" content="One phone. One conspiracy. A city on the edge. Explore The Karachi Siege, an AI film set in Karachi." />
+  <meta name="theme-color" content="#0b0c0f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">The Karachi Siege</a>
+    <a class="brand" href="index.html" aria-label="The Karachi Siege home">THE KARACHI SIEGE<span class="brand-mark">.</span></a>
     <nav aria-label="Primary">
-  <a href="index.html">Home</a>
-  <a href="index.html#cast">Cast</a>
-  <a href="storyboard.html">Storyboard</a>
-  <a href="prompts.html">Prompts</a>
-  <a href="team.html">Team</a>
-</nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="#cast">Cast</a>
+      <a href="storyboard.html">Storyboard</a>
+      <a href="prompts.html">Prompts</a>
+      <a href="team.html">Team</a>
+    </nav>
   </header>
 
   <main>
     <section class="hero" id="top">
       <div class="hero-inner">
-        <p class="eyebrow reveal">An AI film</p>
-        <h1 class="reveal">The Karachi Siege</h1>
-        <p class="logline reveal">
-          A delivery rider in Karachi takes a phone to save his father, and finds that it holds a secret
-          that could bring down someone powerful.
-        </p>
-        <div class="actions reveal">
-          <a class="button primary" href="#watch">Watch the film</a>
-          <a class="button" href="#cast">Meet the cast</a>
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="eyebrow-line"></span> An original AI film · Karachi, Pakistan</p>
+          <h1 class="reveal">THE KARACHI<br /><em>SIEGE</em></h1>
+          <p class="hero-tagline reveal">One phone. One conspiracy.<br class="desktop-break" /> A city on the edge.</p>
+          <p class="logline reveal">
+            A delivery rider takes a phone to save his father—and discovers a secret powerful enough to shake an entire city.
+          </p>
+          <div class="actions reveal">
+            <a class="button primary" href="#watch"><span class="play-icon" aria-hidden="true">▶</span> Watch the film</a>
+            <a class="button" href="storyboard.html">Explore the story <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta reveal" aria-label="Film information">
+            <span><b>GENRE</b> Thriller</span>
+            <span><b>FORMAT</b> AI Film</span>
+            <span><b>SETTING</b> Karachi</span>
+          </div>
         </div>
+        <a class="scroll-cue" href="#watch" aria-label="Scroll to watch the film"><span></span> SCROLL TO DISCOVER</a>
       </div>
     </section>
 
     <section class="watch" id="watch" aria-labelledby="watch-title">
       <div class="section-head reveal">
-        <p class="eyebrow">Full film</p>
-        <h2 id="watch-title">Watch</h2>
+        <p class="eyebrow">The complete experience</p>
+        <h2 id="watch-title">Watch the film<span class="accent-dot">.</span></h2>
       </div>
       <div class="video-frame reveal">
         <div class="video-placeholder" aria-hidden="true"></div>
@@ -51,89 +62,68 @@
           allowfullscreen
         ></iframe>
       </div>
+      <p class="watch-caption">THE KARACHI SIEGE <span>·</span> OFFICIAL AI FILM</p>
     </section>
 
     <section class="cast" id="cast" aria-labelledby="cast-title">
       <div class="section-head reveal">
-        <p class="eyebrow">Who is who</p>
-        <h2 id="cast-title">Cast</h2>
+        <p class="eyebrow">The people in the story</p>
+        <h2 id="cast-title">Characters<span class="accent-dot">.</span></h2>
       </div>
-
       <div class="cast-grid">
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/sameer.webp" alt="Sameer" loading="lazy" decoding="async" />
-          <h3>Sameer</h3>
-          <p class="role">Delivery rider, 20</p>
+          <h3>Sameer</h3><p class="role">Delivery rider, 20</p>
           <p class="bio">Works long shifts on a food-delivery bike to support his family, and carries their money problems alone.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/ayesha.webp" alt="Ayesha" loading="lazy" decoding="async" />
-          <h3>Ayesha</h3>
-          <p class="role">Owner of the phone, 22</p>
+          <h3>Ayesha</h3><p class="role">Owner of the phone, 22</p>
           <p class="bio">Her younger brother needs urgent surgery, and the digital keys to pay for it are on the phone Sameer takes.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/father.webp" alt="Abbu, Sameer's father" loading="lazy" decoding="async" />
-          <h3>Abbu</h3>
-          <p class="role">Sameer's father, 55</p>
+          <h3>Abbu</h3><p class="role">Sameer's father, 55</p>
           <p class="bio">Suffers a sudden heart attack, and the family must find five lakh rupees for his operation.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/zoya.webp" alt="Zoya" loading="lazy" decoding="async" />
-          <h3>Zoya</h3>
-          <p class="role">Sister, 14</p>
+          <h3>Zoya</h3><p class="role">Sister, 14</p>
           <p class="bio">A schoolgirl who asks Sameer for money for her fees, and is frightened when their father falls ill.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/dadi.webp" alt="Dadi" loading="lazy" decoding="async" />
-          <h3>Dadi</h3>
-          <p class="role">Grandmother, 75</p>
+          <h3>Dadi</h3><p class="role">Grandmother, 75</p>
           <p class="bio">Prays for the family through every hard moment, with her prayer beads in hand.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/doctor.webp" alt="The doctor" loading="lazy" decoding="async" />
-          <h3>The Doctor</h3>
-          <p class="role">Hospital doctor</p>
+          <h3>The Doctor</h3><p class="role">Hospital doctor</p>
           <p class="bio">Tells the family that the father's condition is serious and that the operation must happen at once.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/little_brother.webp" alt="Ayesha's little brother" loading="lazy" decoding="async" />
-          <h3>Little Brother</h3>
-          <p class="role">Ayesha's brother, 7</p>
+          <h3>Little Brother</h3><p class="role">Ayesha's brother, 7</p>
           <p class="bio">Lies in intensive care, and his surgery depends on the digital keys stored on the phone.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/follower.webp" alt="The follower" loading="lazy" decoding="async" />
-          <h3>The Follower</h3>
-          <p class="role">Gang member</p>
+          <h3>The Follower</h3><p class="role">Gang member</p>
           <p class="bio">A loyal follower of the gang who tracks Sameer to the hospital car park and tries to take the phone.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/guard1.webp" alt="The guard" loading="lazy" decoding="async" />
-          <h3>The Guard</h3>
-          <p class="role">Gang bodyguard</p>
+          <h3>The Guard</h3><p class="role">Gang bodyguard</p>
           <p class="bio">Leads the search for the phone, confronts Sameer, and orders the chase through the city.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/guard2.webp" alt="The second guard" loading="lazy" decoding="async" />
-          <h3>Second Guard</h3>
-          <p class="role">Gang bodyguard</p>
+          <h3>Second Guard</h3><p class="role">Gang bodyguard</p>
           <p class="bio">Keeps watch from the black Land Cruiser and joins the chase when Sameer runs.</p>
         </article>
-
         <article class="cast-card reveal">
           <img class="cast-photo" src="cast/tv_anchor.webp" alt="The news anchor" loading="lazy" decoding="async" />
-          <h3>News Anchor</h3>
-          <p class="role">Television presenter</p>
+          <h3>News Anchor</h3><p class="role">Television presenter</p>
           <p class="bio">Reports the arrest of the minister, which shows that the truth on the phone has come out.</p>
         </article>
       </div>
@@ -141,10 +131,9 @@
   </main>
 
   <footer class="site-footer">
-    <span>The Karachi Siege</span>
-    <span>AI film project</span>
+    <span>THE KARACHI SIEGE<span class="brand-mark">.</span></span>
+    <span>AN AI FILM PROJECT <span class="footer-separator">/</span> KARACHI, PAKISTAN</span>
   </footer>
-
   <script type="module" src="home.js"></script>
 </body>
 </html>
