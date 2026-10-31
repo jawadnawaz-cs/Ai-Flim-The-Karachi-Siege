@@ -1334,3 +1334,26 @@ section,
   .story-facts strong { font-size: 1.8rem; }
   .story-link { width: 100%; justify-content: center; }
 }
+
+
+/* Shared page introduction and credits-page spacing */
+.page-intro {
+  max-width: 68ch;
+  margin: -8px 0 34px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.team .project-note {
+  margin-top: 52px;
+  border-radius: 3px;
+}
+.team .project-note .about-inner {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+@media (max-width: 640px) {
+  .page-intro { margin-bottom: 26px; font-size: .94rem; }
+  .team .project-note { margin-top: 36px; }
+  .team .project-note .about-inner { padding-top: 32px; padding-bottom: 32px; }
+}
