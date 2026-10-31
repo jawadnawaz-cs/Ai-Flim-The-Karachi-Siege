@@ -6,13 +6,18 @@
   <title>The Karachi Siege — An AI Film</title>
   <meta name="description" content="One phone. One conspiracy. A city on the edge. Explore The Karachi Siege, an AI film set in Karachi." />
   <meta name="theme-color" content="#f5f0e8" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Karachi Siege — An AI Film" />
+  <meta property="og:description" content="At a Karachi red light, a stolen phone turns one delivery rider’s night into a race to save a child and expose a city-sized secret." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/jawadnawaz-cs/Ai-Flim-The-Karachi-Siege/main/stills/scene_01.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="The Karachi Siege home">THE KARACHI SIEGE<span class="brand-mark">.</span></a>
+  <header class="site-header home-header">
     <nav aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
       <a href="#cast">Cast</a>
@@ -29,9 +34,9 @@
         <div class="hero-copy">
           <p class="eyebrow reveal"><span class="eyebrow-line"></span> An original AI film · Karachi, Pakistan</p>
           <h1 class="reveal">THE KARACHI<br /><em>SIEGE</em></h1>
-          <p class="hero-tagline reveal">One phone. One conspiracy.<br class="desktop-break" /> A city on the edge.</p>
+          <p class="hero-tagline reveal">One stolen phone. One child’s surgery. A city-sized secret.</p>
           <p class="logline reveal">
-            A delivery rider takes a phone to save his father—and discovers a secret powerful enough to shake an entire city.
+            At a Karachi red light, delivery rider Sameer takes a phone that holds the digital keys to a child’s surgery—and evidence powerful people will do anything to bury.
           </p>
           <div class="actions reveal">
             <a class="button primary" href="#watch"><span class="play-icon" aria-hidden="true">▶</span> Watch the film</a>
@@ -53,13 +58,18 @@
         <h2 id="watch-title">Watch the film<span class="accent-dot">.</span></h2>
       </div>
       <div class="video-frame reveal">
-        <div class="video-placeholder" aria-hidden="true"></div>
+        <button class="video-poster" id="film-play" type="button" aria-label="Play The Karachi Siege full film">
+          <img src="stills/scene_01.webp" alt="" aria-hidden="true" fetchpriority="high" />
+          <span class="poster-play-icon" aria-hidden="true">▶</span>
+          <span class="poster-play-label">Play the film</span>
+        </button>
         <iframe
           id="film"
-          src="https://www.youtube-nocookie.com/embed/B6pu8312X1o"
+          data-src="https://www.youtube-nocookie.com/embed/B6pu8312X1o?playsinline=1&rel=0"
           title="The Karachi Siege, full film"
           loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
       </div>
@@ -83,32 +93,33 @@
       </div>
       <div class="cast-grid">
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/sameer.webp" alt="Sameer" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/sameer.webp" alt="Sameer, a young Karachi delivery rider" loading="lazy" decoding="async" />
           <h3>Sameer</h3><p class="role">Delivery rider, 20</p>
           <p class="bio">Works long shifts on a food-delivery bike to support his family, and carries their money problems alone.</p>
         </article>
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/ayesha.webp" alt="Ayesha" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/ayesha.webp" alt="Ayesha’s younger brother in intensive care", the owner of the phone Sameer takes" loading="lazy" decoding="async" />
           <h3>Ayesha</h3><p class="role">Owner of the phone, 22</p>
           <p class="bio">Her younger brother needs urgent surgery, and the digital keys to pay for it are on the phone Sameer takes.</p>
         </article>
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/father.webp" alt="Abbu, Sameer's father" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/father.webp" alt="Abbu, Sameer’s father who needs urgent heart surgery" Sameer's father" loading="lazy" decoding="async" />
           <h3>Abbu</h3><p class="role">Sameer's father, 55</p>
           <p class="bio">Suffers a sudden heart attack, and the family must find five lakh rupees for his operation.</p>
         </article>
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/zoya.webp" alt="Zoya" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/zoya.webp" alt="Zoya, Sameer’s younger sister" loading="lazy" decoding="async" />
           <h3>Zoya</h3><p class="role">Sister, 14</p>
           <p class="bio">A schoolgirl who asks Sameer for money for her fees, and is frightened when their father falls ill.</p>
         </article>
+        <h3 class="cast-group-heading">Supporting cast</h3>
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/dadi.webp" alt="Dadi" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/dadi.webp" alt="Dadi, Sameer’s grandmother" loading="lazy" decoding="async" />
           <h3>Dadi</h3><p class="role">Grandmother, 75</p>
           <p class="bio">Prays for the family through every hard moment, with her prayer beads in hand.</p>
         </article>
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/doctor.webp" alt="The doctor" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/doctor.webp" alt="The doctor treating Sameer’s father" loading="lazy" decoding="async" />
           <h3>The Doctor</h3><p class="role">Hospital doctor</p>
           <p class="bio">Tells the family that the father's condition is serious and that the operation must happen at once.</p>
         </article>
@@ -118,22 +129,22 @@
           <p class="bio">Lies in intensive care, and his surgery depends on the digital keys stored on the phone.</p>
         </article>
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/follower.webp" alt="The follower" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/follower.webp" alt="A gang member following Sameer" loading="lazy" decoding="async" />
           <h3>The Follower</h3><p class="role">Gang member</p>
           <p class="bio">A loyal follower of the gang who tracks Sameer to the hospital car park and tries to take the phone.</p>
         </article>
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/guard1.webp" alt="The guard" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/guard1.webp" alt="A gang bodyguard leading the search for the phone" loading="lazy" decoding="async" />
           <h3>The Guard</h3><p class="role">Gang bodyguard</p>
           <p class="bio">Leads the search for the phone, confronts Sameer, and orders the chase through the city.</p>
         </article>
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/guard2.webp" alt="The second guard" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/guard2.webp" alt="A second gang bodyguard beside the black Land Cruiser" loading="lazy" decoding="async" />
           <h3>Second Guard</h3><p class="role">Gang bodyguard</p>
           <p class="bio">Keeps watch from the black Land Cruiser and joins the chase when Sameer runs.</p>
         </article>
         <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/tv_anchor.webp" alt="The news anchor" loading="lazy" decoding="async" />
+          <img class="cast-photo" src="cast/tv_anchor.webp" alt="A television news anchor reporting the minister’s arrest" loading="lazy" decoding="async" />
           <h3>News Anchor</h3><p class="role">Television presenter</p>
           <p class="bio">Reports the arrest of the minister, which shows that the truth on the phone has come out.</p>
         </article>
