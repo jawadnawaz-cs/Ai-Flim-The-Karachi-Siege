@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Storyboard · The Karachi Siege</title>
+  <meta name="description" content="Storyboard stills for all 80 scenes of The Karachi Siege." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">The Karachi Siege</a>
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="index.html#cast">Cast</a>
+      <a href="storyboard.html" aria-current="page">Storyboard</a>
+      <a href="prompts.html">Prompts</a>
+      <a href="team.html">Team</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="storyboard" aria-labelledby="storyboard-title">
+      <div class="section-head">
+        <p class="eyebrow">Shot by shot</p>
+        <h1 id="storyboard-title">Storyboard</h1>
+        <p class="count" id="stills-count"></p>
+      </div>
+      <div class="shot-grid" id="stills-grid"></div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Scene still">
+    <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+    <img id="lightbox-img" alt="" />
+  </dialog>
+
+  <footer class="site-footer">
+    <span>The Karachi Siege</span>
+    <span>AI film project</span>
+  </footer>
+
+  <script type="module" src="storyboard.js"></script>
+</body>
+</html>
