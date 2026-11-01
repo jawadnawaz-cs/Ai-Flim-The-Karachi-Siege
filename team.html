@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Production Notes · The Karachi Siege</title>
-  <meta name="description" content="A record of the creative and technical elements documented in The Karachi Siege project." />
-  <meta name="theme-color" content="#f5f0e8" />
+  <title>Production Credits · The Karachi Siege</title>
+  <meta name="description" content="Meet the faculty supervisor and student filmmaking team behind The Karachi Siege AI feature film." />
+  <meta name="theme-color" content="#0d0c0b" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
@@ -14,86 +14,236 @@
     <a class="brand" href="index.html">THE KARACHI SIEGE<span class="brand-mark">.</span></a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
+      <a href="index.html#watch">Trailer &amp; Film</a>
       <a href="index.html#cast">Cast</a>
       <a href="storyboard.html">Storyboard</a>
       <a href="prompts.html">Prompts</a>
       <a href="team.html" aria-current="page">Team</a>
     </nav>
-    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="theme-toggle-label">Dark mode</span></button>
+    <div class="header-actions">
+      <a class="header-cta" href="index.html#trailer-player"><span aria-hidden="true">▶</span> Trailer</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+        <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+        <span class="theme-toggle-label">Light mode</span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="team" aria-labelledby="team-title">
       <div class="section-head reveal">
-        <p class="eyebrow">THE PEOPLE BEHIND THE FILM</p>
-        <h1 id="team-title" class="team-page-title">Team<span class="accent-dot">.</span></h1>
+        <p class="eyebrow">FILMMAKING &amp; ENGINEERING CREDITS</p>
+        <h1 id="team-title" class="team-page-title">Production Team<span class="accent-dot">.</span></h1>
       </div>
-      <p class="page-intro">A look at the material behind the finished film: its story, generated imagery, scene planning and digital presentation.</p>
+      <p class="page-intro">
+        <em>The Karachi Siege</em> was produced as an end-to-end AI cinema project combining 80 storyboarded scenes, 159 multi-shot video prompts, Urdu voice synthesis, and narrative post-production.
+      </p>
+
       <div class="team-grid team-people-grid">
         <article class="member supervisor-card">
-          <div class="member-topline"><div class="avatar supervisor-avatar" aria-hidden="true">✦</div><span class="member-index">FACULTY</span></div>
+          <div class="member-topline">
+            <div class="avatar supervisor-avatar" aria-hidden="true">IA</div>
+            <span class="member-index">FACULTY SUPERVISOR</span>
+          </div>
           <h2>Professor Engineer Imran Alvi</h2>
-          <p class="role">FACULTY MENTOR & PROJECT SUPERVISOR</p>
-          <p class="bio">Supervised the project from its planning through to its final showcase, providing thoughtful guidance, valuable advice, and constructive feedback throughout the creative and technical process. His mentorship helped the team shape its ideas, overcome challenges, and bring the project together.</p>
-          <div class="member-detail"><h3>Mentorship</h3><ul><li>Project Supervision</li><li>Guidance & Advice</li><li>Constructive Feedback</li><li>Creative Direction</li></ul></div>
+          <p class="role">FACULTY MENTOR &amp; PROJECT SUPERVISOR</p>
+          <p class="bio">
+            Supervised the film from initial script breakdown through final screening, providing academic oversight, narrative feedback, and technical direction across all stages of production.
+          </p>
+          <div class="member-detail">
+            <h3>Supervision &amp; Direction</h3>
+            <ul>
+              <li>Project Supervision</li>
+              <li>Academic Mentorship</li>
+              <li>Story &amp; Pacing Review</li>
+              <li>Quality Assurance</li>
+            </ul>
+          </div>
         </article>
+
         <article class="member team-person">
-          <div class="member-topline"><div class="avatar" aria-hidden="true">MM</div><span class="member-index">TEAM MEMBER</span></div>
+          <div class="member-topline">
+            <div class="avatar" aria-hidden="true">MM</div>
+            <span class="member-index">PROJECT LEAD</span>
+          </div>
           <h2>Muhammad Mohid</h2>
           <p class="member-roll">26F-CS-051</p>
-          <p class="role">Project Lead & Improvisation</p>
-          <p class="bio">Orchestrated the project roadmap, authored comprehensive prompt architectures across video models, structured narrative flow, and resolved creative bottlenecks.</p>
-          <div class="member-detail"><h3>Key Contributions</h3><ul><li>Lead</li><li>Improvisation</li><li>Storyboard</li><li>Prompts Generation</li></ul></div>
-          <div class="member-tools"><h3>Primary AI Tools</h3><div class="tool-tags"><span>Gemini</span><span>Claude</span><span>Seedance</span><span>Google Flow</span></div></div>
+          <p class="role">Project Lead &amp; Prompt Direction</p>
+          <p class="bio">
+            Led the production schedule and 80-scene story breakdown, authoring the 35mm camera and character-continuity prompts across the 159-clip shooting script.
+          </p>
+          <div class="member-detail">
+            <h3>Key Contributions</h3>
+            <ul>
+              <li>Project Lead</li>
+              <li>Scene Direction</li>
+              <li>Storyboard Continuity</li>
+              <li>Prompt Engineering</li>
+            </ul>
+          </div>
+          <div class="member-tools">
+            <h3>Production Stack</h3>
+            <div class="tool-tags">
+              <span>Gemini</span>
+              <span>Claude</span>
+              <span>Seedance</span>
+              <span>Google Flow</span>
+            </div>
+          </div>
         </article>
+
         <article class="member team-person">
-          <div class="member-topline"><div class="avatar" aria-hidden="true">HA</div><span class="member-index">TEAM MEMBER</span></div>
+          <div class="member-topline">
+            <div class="avatar" aria-hidden="true">HA</div>
+            <span class="member-index">POST-PRODUCTION</span>
+          </div>
           <h2>Hamza Ali</h2>
           <p class="member-roll">26F-CS-028</p>
-          <p class="role">Editing & Post-Production</p>
-          <p class="bio">Executed the masterful assembly of all 160 generated clips, fine-tuning transitions, timing, sound effects synchronization, and rendering the final cut.</p>
-          <div class="member-detail"><h3>Key Contributions</h3><ul><li>Video Editing</li><li>Pacing & Timeline</li><li>Color Timing</li><li>Audio Assembly</li></ul></div>
-          <div class="member-tools"><h3>Primary AI Tools</h3><div class="tool-tags"><span>CapCut</span><span>ElevenLabs</span></div></div>
+          <p class="role">Editing &amp; Sound Design</p>
+          <p class="bio">
+            Assembled all 159 generated video clips into the final feature cut and theatrical trailer, syncing Urdu voice-over dialogue, street ambience, and dramatic pacing.
+          </p>
+          <div class="member-detail">
+            <h3>Key Contributions</h3>
+            <ul>
+              <li>Feature &amp; Trailer Edit</li>
+              <li>Pacing &amp; Timeline</li>
+              <li>Color Grading</li>
+              <li>Dialogue &amp; Foley Sync</li>
+            </ul>
+          </div>
+          <div class="member-tools">
+            <h3>Production Stack</h3>
+            <div class="tool-tags">
+              <span>CapCut</span>
+              <span>ElevenLabs</span>
+            </div>
+          </div>
         </article>
+
         <article class="member team-person">
-          <div class="member-topline"><div class="avatar" aria-hidden="true">BB</div><span class="member-index">TEAM MEMBER</span></div>
+          <div class="member-topline">
+            <div class="avatar" aria-hidden="true">BB</div>
+            <span class="member-index">CINEMATOGRAPHY</span>
+          </div>
           <h2>Babar</h2>
           <p class="member-roll">26F-CS-047</p>
-          <p class="role">Video Generation & Storyboard</p>
-          <p class="bio">Visualized critical cinematic sequences, composed keyframe storyboards, and iteratively generated high-tension action sequences using generative diffusion pipelines.</p>
-          <div class="member-detail"><h3>Key Contributions</h3><ul><li>Video Generation</li><li>Storyboard Concepting</li><li>Scene Blocking</li></ul></div>
-          <div class="member-tools"><h3>Primary AI Tools</h3><div class="tool-tags"><span>Seedance</span><span>Muse AI</span><span>Google Flow</span></div></div>
+          <p class="role">Video Generation &amp; Storyboard</p>
+          <p class="bio">
+            Designed keyframe compositions and generated the hospital crisis and red-light confrontation sequences, maintaining character wardrobe and facial consistency across shots.
+          </p>
+          <div class="member-detail">
+            <h3>Key Contributions</h3>
+            <ul>
+              <li>Video Generation</li>
+              <li>Storyboard Keyframes</li>
+              <li>Scene Blocking</li>
+            </ul>
+          </div>
+          <div class="member-tools">
+            <h3>Production Stack</h3>
+            <div class="tool-tags">
+              <span>Seedance</span>
+              <span>Muse AI</span>
+              <span>Google Flow</span>
+            </div>
+          </div>
         </article>
+
         <article class="member team-person">
-          <div class="member-topline"><div class="avatar" aria-hidden="true">MZ</div><span class="member-index">TEAM MEMBER</span></div>
+          <div class="member-topline">
+            <div class="avatar" aria-hidden="true">MZ</div>
+            <span class="member-index">VISUAL GENERATION</span>
+          </div>
           <h2>Muzammil</h2>
           <p class="member-roll">26F-CS-170</p>
-          <p class="role">Video Generation</p>
-          <p class="bio">Generated dynamic camera movements and environmental atmosphere clips, experimenting with lighting parameters to depict the metropolitan atmosphere of Karachi.</p>
-          <div class="member-detail"><h3>Key Contributions</h3><ul><li>Video Generation</li><li>Prompt Iteration</li><li>Asset Rendering</li></ul></div>
-          <div class="member-tools"><h3>Primary AI Tools</h3><div class="tool-tags"><span>Seedance</span><span>Muse AI</span></div></div>
+          <p class="role">Video Generation &amp; Lighting</p>
+          <p class="bio">
+            Produced exterior Karachi street sequences and interior hospital shots, tuning lighting and atmospheric parameters to match day-to-night transitions.
+          </p>
+          <div class="member-detail">
+            <h3>Key Contributions</h3>
+            <ul>
+              <li>Video Generation</li>
+              <li>Lighting Continuity</li>
+              <li>Scene Rendering</li>
+            </ul>
+          </div>
+          <div class="member-tools">
+            <h3>Production Stack</h3>
+            <div class="tool-tags">
+              <span>Seedance</span>
+              <span>Muse AI</span>
+            </div>
+          </div>
         </article>
+
         <article class="member team-person">
-          <div class="member-topline"><div class="avatar" aria-hidden="true">JN</div><span class="member-index">TEAM MEMBER</span></div>
+          <div class="member-topline">
+            <div class="avatar" aria-hidden="true">JN</div>
+            <span class="member-index">ACTION &amp; CAMERA</span>
+          </div>
           <h2>Jawad Nawaz</h2>
           <p class="member-roll">26F-CS-044</p>
-          <p class="role">Video Generation</p>
-          <p class="bio">Engineered high-motion tactical clips, camera pans, and drone perspectives, contributing dozens of consistent clips to the 160-clip total archive.</p>
-          <div class="member-detail"><h3>Key Contributions</h3><ul><li>Video Generation</li><li>Action Sequences</li><li>Camera Dynamics</li></ul></div>
-          <div class="member-tools"><h3>Primary AI Tools</h3><div class="tool-tags"><span>Seedance</span><span>Google Flow</span></div></div>
+          <p class="role">Video Generation &amp; Web Platform</p>
+          <p class="bio">
+            Generated the tracking shots, Land Cruiser chase sequences, and aerial city perspectives, and published the digital screening room and open prompt archive.
+          </p>
+          <div class="member-detail">
+            <h3>Key Contributions</h3>
+            <ul>
+              <li>Video Generation</li>
+              <li>Chase &amp; Action Shots</li>
+              <li>Camera Movement</li>
+              <li>Web Archive</li>
+            </ul>
+          </div>
+          <div class="member-tools">
+            <h3>Production Stack</h3>
+            <div class="tool-tags">
+              <span>Seedance</span>
+              <span>Google Flow</span>
+            </div>
+          </div>
         </article>
+
         <article class="member team-person">
-          <div class="member-topline"><div class="avatar" aria-hidden="true">BA</div><span class="member-index">TEAM MEMBER</span></div>
+          <div class="member-topline">
+            <div class="avatar" aria-hidden="true">BA</div>
+            <span class="member-index">DOCUMENTATION</span>
+          </div>
           <h2>Basit</h2>
           <p class="member-roll">26F-CS-046</p>
-          <p class="role">All Documentation</p>
-          <p class="bio">Authored end-to-end technical documentation for AICT Lab 01, tracked prompts repository, cataloged all 160 video segments, and compiled the final academic submission report.</p>
-          <div class="member-detail"><h3>Key Contributions</h3><ul><li>All Documentation</li><li>Academic Report</li><li>Asset Cataloging</li><li>Project Archive</li></ul></div>
-          <div class="member-tools"><h3>Primary AI Tools</h3><div class="tool-tags"><span>Gemini</span><span>Claude</span><span>Google Docs</span></div></div>
-        </article>      </div>      <div class="about project-note">
+          <p class="role">Technical Documentation &amp; Script</p>
+          <p class="bio">
+            Compiled the complete AICT Lab 01 production dossier, indexed all 159 shot prompts with timecodes and voice-over lines, and prepared the final project report.
+          </p>
+          <div class="member-detail">
+            <h3>Key Contributions</h3>
+            <ul>
+              <li>Production Dossier</li>
+              <li>Academic Report</li>
+              <li>Shot Indexing</li>
+              <li>Script Archiving</li>
+            </ul>
+          </div>
+          <div class="member-tools">
+            <h3>Production Stack</h3>
+            <div class="tool-tags">
+              <span>Gemini</span>
+              <span>Claude</span>
+              <span>Google Docs</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="about project-note">
         <div class="about-inner">
-          <p class="eyebrow">The project</p>
-          <p class="about-copy">The Karachi Siege is an AI-assisted film project set in Karachi, Pakistan. This website documents the finished film alongside its characters, storyboard and creative prompts.</p>
+          <p class="eyebrow">Production Colophon</p>
+          <p class="about-copy">
+            <em>The Karachi Siege</em> is an original AI-assisted dramatic thriller set in Karachi, Pakistan. This digital edition presents the official trailer, the complete 80-scene film, the visual storyboard, and all 159 generation prompts used in production.
+          </p>
         </div>
       </div>
     </section>
@@ -101,7 +251,7 @@
 
   <footer class="site-footer">
     <span>THE KARACHI SIEGE<span class="brand-mark">.</span></span>
-    <span>AN AI FILM PROJECT <span class="footer-separator">/</span> KARACHI, PAKISTAN</span>
+    <span>OFFICIAL AI FEATURE FILM &amp; ARCHIVE <span class="footer-separator">/</span> KARACHI, PAKISTAN</span>
   </footer>
   <script type="module" src="theme.js"></script>
 </body>

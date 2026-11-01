@@ -3,11 +3,11 @@ const toggle = document.querySelector(".theme-toggle");
 const icon = document.querySelector(".theme-toggle-icon");
 const label = document.querySelector(".theme-toggle-label");
 
-let savedTheme = "light";
+let savedTheme = "dark";
 try {
-  savedTheme = localStorage.getItem("karachi-siege-theme") || "light";
+  savedTheme = localStorage.getItem("karachi-siege-theme") || "dark";
 } catch {
-  savedTheme = "light";
+  savedTheme = "dark";
 }
 
 function applyTheme(theme) {
@@ -20,7 +20,7 @@ function applyTheme(theme) {
   if (icon) icon.textContent = isDark ? "☀" : "☾";
   if (label) label.textContent = isDark ? "Light mode" : "Dark mode";
   const themeColor = document.querySelector('meta[name="theme-color"]');
-  if (themeColor) themeColor.setAttribute("content", isDark ? "#171615" : "#f7f4ee");
+  if (themeColor) themeColor.setAttribute("content", isDark ? "#0d0c0b" : "#f6f2ea");
 }
 
 applyTheme(savedTheme);

@@ -1,45 +1,108 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Storyboard · The Karachi Siege</title>
-  <meta name="description" content="Storyboard stills for all 80 scenes of The Karachi Siege." />
+  <title>Storyboard · 80 Scenes · The Karachi Siege</title>
+  <meta name="description" content="Interactive 80-scene storyboard archive for The Karachi Siege with scene locations, character callouts, Urdu dialogue, and generation prompts." />
+  <meta name="theme-color" content="#0d0c0b" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">The Karachi Siege</a>
+    <a class="brand" href="index.html">THE KARACHI SIEGE<span class="brand-mark">.</span></a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
+      <a href="index.html#watch">Trailer &amp; Film</a>
       <a href="index.html#cast">Cast</a>
       <a href="storyboard.html" aria-current="page">Storyboard</a>
       <a href="prompts.html">Prompts</a>
       <a href="team.html">Team</a>
     </nav>
-    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="theme-toggle-label">Dark mode</span></button>
+    <div class="header-actions">
+      <a class="header-cta" href="index.html#trailer-player"><span aria-hidden="true">▶</span> Trailer</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+        <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+        <span class="theme-toggle-label">Light mode</span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="storyboard" aria-labelledby="storyboard-title">
       <div class="section-head">
-        <p class="eyebrow">Shot by shot</p>
-        <h1 id="storyboard-title">Storyboard</h1>
-        <p class="count" id="stills-count"></p>
+        <p class="eyebrow">Visual Continuity Archive · 80 Keyframes</p>
+        <h1 id="storyboard-title">Storyboard<span class="accent-dot">.</span></h1>
+        <p class="page-intro">Explore all 80 scenes shot-by-shot. Click any frame to inspect its Karachi location, timecode, voice-over dialogue, and AI camera prompts.</p>
       </div>
+
+      <div class="archive-toolbar" role="region" aria-label="Filter and search scenes">
+        <div class="search-box">
+          <input
+            type="search"
+            id="scene-search"
+            placeholder="Search by scene #, location, character, or dialogue..."
+            aria-label="Search scenes"
+          />
+        </div>
+        <div class="filters" id="act-filters" role="group" aria-label="Filter by dramatic act">
+          <button class="filter-btn is-active" type="button" data-act="all">All 80 Scenes</button>
+          <button class="filter-btn" type="button" data-act="1">Act I (01–20)</button>
+          <button class="filter-btn" type="button" data-act="2">Act II (21–40)</button>
+          <button class="filter-btn" type="button" data-act="3">Act III (41–60)</button>
+          <button class="filter-btn" type="button" data-act="4">Act IV (61–80)</button>
+        </div>
+        <p class="count" id="stills-count" aria-live="polite"></p>
+      </div>
+
       <div class="shot-grid" id="stills-grid"></div>
     </section>
   </main>
 
-  <dialog class="lightbox" id="lightbox" aria-label="Scene still">
-    <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
-    <img id="lightbox-img" alt="" />
+  <dialog class="lightbox" id="lightbox" aria-label="Scene inspection modal">
+    <div class="lightbox-shell">
+      <div class="lightbox-topbar">
+        <div class="lightbox-badges">
+          <span class="lightbox-scene-num" id="lb-scene-num">SCENE 01</span>
+          <span class="lightbox-timecode" id="lb-timecode">00:00-00:15</span>
+        </div>
+        <div class="lightbox-nav-controls">
+          <button class="lb-nav-btn" id="lb-prev" type="button" aria-label="Previous scene">← Prev</button>
+          <button class="lb-nav-btn" id="lb-next" type="button" aria-label="Next scene">Next →</button>
+          <button class="lightbox-close" type="button" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+
+      <div class="lightbox-content">
+        <div class="lightbox-media">
+          <img id="lightbox-img" alt="" />
+        </div>
+        <div class="lightbox-inspector">
+          <div class="lb-meta-block">
+            <span class="lb-label">LOCATION / SETTING</span>
+            <h3 id="lb-place">—</h3>
+          </div>
+          <div class="lb-meta-block">
+            <span class="lb-label">CHARACTERS IN SCENE</span>
+            <p id="lb-characters">—</p>
+          </div>
+          <div class="lb-meta-block">
+            <span class="lb-label">VOICE-OVER / DIALOGUE</span>
+            <blockquote id="lb-vo">—</blockquote>
+          </div>
+          <div class="lb-meta-block">
+            <span class="lb-label">GENERATION CLIPS</span>
+            <div class="lb-clips" id="lb-clips"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </dialog>
 
   <footer class="site-footer">
-    <span>The Karachi Siege</span>
-    <span>AI film project</span>
+    <span>THE KARACHI SIEGE<span class="brand-mark">.</span></span>
+    <span>OFFICIAL AI FEATURE FILM &amp; ARCHIVE <span class="footer-separator">/</span> KARACHI, PAKISTAN</span>
   </footer>
 
   <script type="module" src="storyboard.js"></script>

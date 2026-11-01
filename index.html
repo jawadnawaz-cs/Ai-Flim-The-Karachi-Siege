@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Karachi Siege — An AI Film</title>
-  <meta name="description" content="A delivery rider in Karachi takes a phone that holds the keys to a child’s surgery and a dangerous city-wide secret." />
-  <meta name="theme-color" content="#f5f0e8" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Karachi Siege — An AI Film" />
-  <meta property="og:description" content="At a Karachi red light, a stolen phone turns one delivery rider’s night into a race to save a child and expose a city-sized secret." />
+  <title>The Karachi Siege — Official AI Feature Film &amp; Trailer</title>
+  <meta name="description" content="Watch the official trailer and full AI thriller film The Karachi Siege. At a Karachi red light, a delivery rider takes a phone holding the keys to a child’s surgery and a city-wide conspiracy." />
+  <meta name="theme-color" content="#0d0c0b" />
+  <meta property="og:type" content="video.movie" />
+  <meta property="og:title" content="The Karachi Siege — Official Trailer &amp; Full AI Film" />
+  <meta property="og:description" content="At a Karachi red light, a stolen phone turns one delivery rider’s night into a race to save two lives and expose a city-sized conspiracy." />
   <meta property="og:image" content="https://raw.githubusercontent.com/jawadnawaz-cs/Ai-Flim-The-Karachi-Siege/main/stills/scene_01.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -17,144 +17,459 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header home-header">
+  <header class="site-header">
+    <a class="brand" href="index.html">THE KARACHI SIEGE<span class="brand-mark">.</span></a>
     <nav aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
+      <a href="#watch">Trailer &amp; Film</a>
+      <a href="#story">Story Acts</a>
       <a href="#cast">Cast</a>
       <a href="storyboard.html">Storyboard</a>
       <a href="prompts.html">Prompts</a>
       <a href="team.html">Team</a>
     </nav>
-    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="theme-toggle-label">Dark mode</span></button>
+    <div class="header-actions">
+      <a class="header-cta" href="#trailer-player"><span aria-hidden="true">▶</span> Trailer</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+        <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+        <span class="theme-toggle-label">Light mode</span>
+      </button>
+    </div>
   </header>
 
   <main>
+    <!-- HERO SECTION -->
     <section class="hero" id="top">
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow reveal"><span class="eyebrow-line"></span> An original AI film · Karachi, Pakistan</p>
+          <div class="festival-badges reveal">
+            <span class="festival-pill"><span class="signal-dot"></span> OFFICIAL AI FEATURE FILM</span>
+            <span class="festival-pill">KARACHI NOIR THRILLER</span>
+            <span class="festival-pill">80 SCENES · 159 SHOTS</span>
+          </div>
+          <p class="eyebrow reveal"><span class="eyebrow-line"></span> Set in the streets of Karachi, Pakistan</p>
           <h1 class="reveal">THE KARACHI<br /><em>SIEGE</em></h1>
-          <p class="hero-tagline reveal">One stolen phone. One child’s surgery. A city-sized secret.</p>
+          <p class="hero-tagline reveal">One stolen phone. Two lives in intensive care. A city-sized conspiracy.</p>
           <p class="logline reveal">
-            At a Karachi red light, delivery rider Sameer takes a phone that holds the digital keys to a child’s surgery—and evidence powerful people will do anything to bury.
+            When his father collapses with a sudden heart failure requiring five lakh rupees for immediate surgery, 20-year-old delivery rider Sameer snatches a phone at a Karachi traffic signal—unaware it holds both a child’s life-saving hospital funds and incriminating evidence against a powerful minister.
           </p>
           <div class="actions reveal">
-            <a class="button primary" href="#watch"><span class="play-icon" aria-hidden="true">▶</span> Watch the film</a>
-            <a class="button" href="storyboard.html">Explore the story <span aria-hidden="true">↗</span></a>
+            <a class="button primary" href="#trailer-player" data-watch-target="trailer">
+              <span class="play-icon" aria-hidden="true">▶</span> Watch Official Trailer
+            </a>
+            <a class="button secondary-cta" href="#movie-player" data-watch-target="movie">
+              <span class="play-icon" aria-hidden="true">▶</span> Watch Full Movie
+            </a>
+            <a class="button" href="storyboard.html">
+              80-Scene Storyboard <span aria-hidden="true">↗</span>
+            </a>
           </div>
-          <div class="hero-meta reveal" aria-label="Film information">
-            <span><b>GENRE</b> Thriller</span>
-            <span><b>FORMAT</b> AI Film</span>
-            <span><b>SETTING</b> Karachi</span>
+          <div class="hero-meta reveal" aria-label="Film specifications">
+            <span><b>GENRE</b> Crime / Urban Thriller</span>
+            <span><b>LANGUAGE</b> Urdu / Roman Script</span>
+            <span><b>PRODUCTION</b> 159 AI Video Clips</span>
+            <span><b>LOCATION</b> Karachi, Pakistan</span>
           </div>
         </div>
-        <a class="scroll-cue" href="#watch" aria-label="Scroll to watch the film"><span></span> SCROLL TO DISCOVER</a>
+        <a class="scroll-cue" href="#watch" aria-label="Scroll to screening room"><span></span> ENTER SCREENING ROOM</a>
       </div>
     </section>
 
+    <!-- SCREENING ROOM: 1. OFFICIAL TRAILER FIRST, 2. FULL MOVIE SECOND -->
     <section class="watch" id="watch" aria-labelledby="watch-title">
-      <div class="section-head reveal">
-        <p class="eyebrow">The complete experience</p>
-        <h2 id="watch-title">Watch the film<span class="accent-dot">.</span></h2>
+      <div class="screening-topbar reveal">
+        <div class="section-head">
+          <p class="eyebrow">Theatrical Screening Room</p>
+          <h2 id="watch-title">Official Trailer &amp; Full Feature<span class="accent-dot">.</span></h2>
+        </div>
+        <div class="screening-controls">
+          <div class="screening-tabs" role="group" aria-label="Jump to video player">
+            <a class="screen-tab is-active" href="#trailer-player" data-screen-nav="trailer">01 · Official Trailer</a>
+            <a class="screen-tab" href="#movie-player" data-screen-nav="movie">02 · Watch Full Movie</a>
+          </div>
+          <button class="theater-btn" id="theater-toggle" type="button" aria-pressed="false">
+            <span aria-hidden="true">◐</span> Theater Mode
+          </button>
+        </div>
       </div>
-      <div class="video-frame reveal">
-        <button class="video-poster" id="film-play" type="button" aria-label="Play The Karachi Siege full film">
-          <img src="https://i.ytimg.com/vi/B6pu8312X1o/hqdefault.jpg" alt="" aria-hidden="true" fetchpriority="high" />
-          <span class="poster-play-icon" aria-hidden="true">▶</span>
-          <span class="poster-play-label">Play the film</span>
-        </button>
-        <iframe
-          id="film"
-          data-src="https://www.youtube-nocookie.com/embed/B6pu8312X1o?playsinline=1&rel=0"
-          title="The Karachi Siege, full film"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+
+      <!-- STEP 1: OFFICIAL TRAILER AT START -->
+      <article class="cinema-showcase trailer-showcase reveal" id="trailer-player">
+        <div class="showcase-header">
+          <div class="showcase-badge-group">
+            <span class="showcase-step">PART 01 · START HERE</span>
+            <span class="showcase-status"><span class="signal-dot"></span> OFFICIAL TRAILER</span>
+          </div>
+          <div class="showcase-title-row">
+            <div>
+              <h3>The Karachi Siege — Official Trailer</h3>
+              <p class="showcase-sub">First look at Sameer’s race against time across Karachi’s neon-lit intersections, hospital corridors, and back-alley chases.</p>
+            </div>
+            <a class="yt-external-link" href="https://youtu.be/fCb20QfOTT0" target="_blank" rel="noopener noreferrer">
+              Open Trailer on YouTube <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="video-frame">
+          <div class="frame-timecode" aria-hidden="true">
+            <span>REEL 01 // OFFICIAL TRAILER</span>
+            <span>TC 00:00:00:00 · 24FPS</span>
+          </div>
+          <button class="video-poster" id="trailer-play" type="button" aria-label="Play The Karachi Siege Official Trailer">
+            <img
+              src="https://i.ytimg.com/vi/fCb20QfOTT0/maxresdefault.jpg"
+              onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/fCb20QfOTT0/hqdefault.jpg';"
+              alt="The Karachi Siege Official Trailer poster"
+              fetchpriority="high"
+            />
+            <span class="poster-badge">01 · OFFICIAL TEASER TRAILER</span>
+            <span class="poster-play-icon" aria-hidden="true">▶</span>
+            <span class="poster-play-label">Play Official Trailer</span>
+          </button>
+          <iframe
+            id="trailer"
+            data-src="https://www.youtube-nocookie.com/embed/fCb20QfOTT0?playsinline=1&rel=0"
+            title="The Karachi Siege — Official Trailer"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="showcase-footer">
+          <p class="watch-caption">THE KARACHI SIEGE <span>·</span> OFFICIAL THEATRICAL TRAILER (YOUTUBE: fCb20QfOTT0)</p>
+          <a class="next-feature-link" href="#movie-player">Continue to Full Movie below <span aria-hidden="true">↓</span></a>
+        </div>
+      </article>
+
+      <!--Connector between Trailer and Full Movie-->
+      <div class="screening-divider reveal" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-pill">THEN WATCH THE COMPLETE FEATURE FILM</span>
+        <span class="divider-line"></span>
       </div>
-      <p class="watch-caption">THE KARACHI SIEGE <span>·</span> OFFICIAL AI FILM</p>
+
+      <!-- STEP 2: WATCH FULL MOVIE -->
+      <article class="cinema-showcase feature-showcase reveal" id="movie-player">
+        <div class="showcase-header">
+          <div class="showcase-badge-group">
+            <span class="showcase-step">PART 02 · MAIN FEATURE</span>
+            <span class="showcase-status feature-pill">COMPLETE 80-SCENE FILM</span>
+          </div>
+          <div class="showcase-title-row">
+            <div>
+              <h3>Watch Full Movie — The Karachi Siege</h3>
+              <p class="showcase-sub">Experience the complete 80-scene AI feature film from Sameer’s 6:00 AM shift to the final broadcast that shakes Karachi.</p>
+            </div>
+            <a class="yt-external-link" href="https://www.youtube.com/watch?v=B6pu8312X1o" target="_blank" rel="noopener noreferrer">
+              Open Full Movie on YouTube <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="video-frame">
+          <div class="frame-timecode" aria-hidden="true">
+            <span>REEL 02 // FULL FEATURE FILM</span>
+            <span>80 SCENES · 159 CLIPS</span>
+          </div>
+          <button class="video-poster" id="film-play" type="button" aria-label="Play The Karachi Siege full film">
+            <img
+              src="https://i.ytimg.com/vi/B6pu8312X1o/maxresdefault.jpg"
+              onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/B6pu8312X1o/hqdefault.jpg';"
+              alt="The Karachi Siege Full Movie poster"
+              loading="lazy"
+            />
+            <span class="poster-badge">02 · FULL FEATURE PRESENTATION</span>
+            <span class="poster-play-icon" aria-hidden="true">▶</span>
+            <span class="poster-play-label">Watch Full Movie</span>
+          </button>
+          <iframe
+            id="film"
+            data-src="https://www.youtube-nocookie.com/embed/B6pu8312X1o?playsinline=1&rel=0"
+            title="The Karachi Siege, full film"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <!-- Chapter / Act Guide for the Full Film -->
+        <div class="film-chapters" aria-label="Film acts and chapters">
+          <div class="chapter-pill">
+            <span class="chapter-num">ACT I · SCENES 01–20</span>
+            <strong>The 6 AM Shift &amp; Abbu’s Collapse</strong>
+            <span>00:00 – 05:00</span>
+          </div>
+          <div class="chapter-pill">
+            <span class="chapter-num">ACT II · SCENES 21–40</span>
+            <strong>The Red Light &amp; Stolen Phone</strong>
+            <span>05:00 – 10:00</span>
+          </div>
+          <div class="chapter-pill">
+            <span class="chapter-num">ACT III · SCENES 41–60</span>
+            <strong>Land Cruisers &amp; Hospital Siege</strong>
+            <span>10:00 – 15:00</span>
+          </div>
+          <div class="chapter-pill">
+            <span class="chapter-num">ACT IV · SCENES 61–80</span>
+            <strong>Redemption &amp; State Broadcast</strong>
+            <span>15:00 – End</span>
+          </div>
+        </div>
+        <p class="watch-caption">THE KARACHI SIEGE <span>·</span> COMPLETE AI FEATURE FILM (YOUTUBE: B6pu8312X1o)</p>
+      </article>
     </section>
 
+    <!-- STORY & 4-ACT BREAKDOWN -->
     <section class="about story-brief" id="story" aria-labelledby="story-title">
       <div class="about-inner">
-        <p class="eyebrow">The story · Karachi, Pakistan</p>
-        <h2 id="story-title">One ordinary night. A city-changing secret.</h2>
-        <p class="about-copy">Sameer, a young delivery rider trying to save his father, takes a phone that draws him into a dangerous conspiracy. One desperate decision becomes a test of courage—and a chance for the truth to reach an entire city.</p>
-        <p class="story-note">A Karachi story about family, desperation, and the price of telling the truth.</p>
-        <a class="button story-link" href="storyboard.html">Explore all 80 scenes <span aria-hidden="true">↗</span></a>
+        <div class="story-overview reveal">
+          <p class="eyebrow">Narrative Architecture · Karachi, Pakistan</p>
+          <h2 id="story-title">One ordinary night. A city-changing secret<span class="accent-dot">.</span></h2>
+          <p class="about-copy">
+            Sameer, a twenty-year-old delivery rider supporting his ailing father, younger sister Zoya, and elderly Dadi, is pushed to the brink when his father suffers a critical heart attack requiring five lakh rupees for immediate surgery. At a jammed Karachi traffic signal, a split-second mistake pulls him into the crosshairs of an armed political syndicate.
+          </p>
+          <p class="story-note">
+            “Between two hospital beds and a stolen screen, one rider has to choose whether desperation will break him—or wake up an entire city.”
+          </p>
+          <div class="story-stats">
+            <div><strong>80</strong><span>Keyframed Scenes</span></div>
+            <div><strong>159</strong><span>Generated Shots</span></div>
+            <div><strong>11</strong><span>Core Characters</span></div>
+            <div><strong>4</strong><span>Dramatic Acts</span></div>
+          </div>
+        </div>
+
+        <div class="acts-grid">
+          <article class="act-card reveal">
+            <div class="act-thumb">
+              <img src="stills/scene_01.webp" alt="Scene 01 still — Sameer's cramped bedroom in Karachi" loading="lazy" />
+              <span class="act-tag">ACT I · SCENES 01–20</span>
+            </div>
+            <div class="act-body">
+              <h3>The Weight of Five Lakh</h3>
+              <p>From a 6:00 AM alarm in a cramped Karachi flat to scorching afternoon delivery shifts, Sameer’s fragile routine shatters when Zoya calls in panic: Abbu has collapsed and needs immediate heart surgery.</p>
+              <a href="storyboard.html?act=1" class="act-link">View Act I Stills <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="act-card reveal">
+            <div class="act-thumb">
+              <img src="stills/scene_20.webp" alt="Scene 20 still — Karachi traffic signal at dusk" loading="lazy" />
+              <span class="act-tag">ACT II · SCENES 21–40</span>
+            </div>
+            <div class="act-body">
+              <h3>Signal Red &amp; The Stolen Phone</h3>
+              <p>Cornered by hospital billing deadlines, Sameer snatches a phone through a car window at a red light—only to discover its owner, Ayesha, is trying to pay for her seven-year-old brother’s ICU surgery.</p>
+              <a href="storyboard.html?act=2" class="act-link">View Act II Stills <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="act-card reveal">
+            <div class="act-thumb">
+              <img src="stills/scene_45.webp" alt="Scene 45 still — The gang pursuit in Karachi" loading="lazy" />
+              <span class="act-tag">ACT III · SCENES 41–60</span>
+            </div>
+            <div class="act-body">
+              <h3>Black Land Cruisers in Pursuit</h3>
+              <p>The phone contains more than hospital keys—it holds encrypted corruption evidence against a sitting minister. Armed guards track Sameer across Karachi’s alleys and hospital parking decks.</p>
+              <a href="storyboard.html?act=3" class="act-link">View Act III Stills <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="act-card reveal">
+            <div class="act-thumb">
+              <img src="stills/scene_75.webp" alt="Scene 75 still — Breaking news broadcast" loading="lazy" />
+              <span class="act-tag">ACT IV · SCENES 61–80</span>
+            </div>
+            <div class="act-body">
+              <h3>The Truth Reaches the City</h3>
+              <p>Risking his life to return the phone to Ayesha and leak the minister’s files to the press, Sameer turns a moment of guilt into redemption—saving both families as breaking news rocks Karachi.</p>
+              <a href="storyboard.html?act=4" class="act-link">View Act IV Stills <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
+    <!-- CHARACTERS / CAST DOSSIER -->
     <section class="cast" id="cast" aria-labelledby="cast-title">
       <div class="section-head reveal">
-        <p class="eyebrow">The people in the story</p>
-        <h2 id="cast-title">Characters<span class="accent-dot">.</span></h2>
+        <div>
+          <p class="eyebrow">Dramatis Personae · 11 Characters</p>
+          <h2 id="cast-title">Characters &amp; Factions<span class="accent-dot">.</span></h2>
+        </div>
+        <div class="cast-filters" role="group" aria-label="Filter characters by faction">
+          <button class="filter-btn is-active" type="button" data-cast-filter="all">All Characters (11)</button>
+          <button class="filter-btn" type="button" data-cast-filter="family">Sameer’s Family</button>
+          <button class="filter-btn" type="button" data-cast-filter="hospital">Ayesha &amp; Hospital</button>
+          <button class="filter-btn" type="button" data-cast-filter="syndicate">Syndicate &amp; Press</button>
+        </div>
       </div>
-      <div class="cast-grid">
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/sameer.webp" alt="Sameer, a young Karachi delivery rider" loading="lazy" decoding="async" />
-          <h3>Sameer</h3><p class="role">Delivery rider, 20</p>
-          <p class="bio">Works long shifts on a food-delivery bike to support his family, and carries their money problems alone.</p>
+
+      <div class="cast-grid" id="cast-grid">
+        <article class="cast-card reveal" data-faction="family">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/sameer.webp" alt="Sameer, a young Karachi delivery rider" loading="lazy" decoding="async" />
+            <span class="cast-badge">PROTAGONIST</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>Sameer</h3>
+            <p class="role">Delivery Rider · Age 20</p>
+            <p class="bio">Rides a red 70cc motorbike through scorching Karachi traffic to keep his household afloat after his mother’s passing, carrying the weight of his father’s surgery alone.</p>
+          </div>
         </article>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/ayesha.webp" alt="Ayesha, the owner of the phone Sameer takes" loading="lazy" decoding="async" />
-          <h3>Ayesha</h3><p class="role">Owner of the phone, 22</p>
-          <p class="bio">Her younger brother needs urgent surgery, and the digital keys to pay for it are on the phone Sameer takes.</p>
+
+        <article class="cast-card reveal" data-faction="hospital">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/ayesha.webp" alt="Ayesha, the owner of the phone Sameer takes" loading="lazy" decoding="async" />
+            <span class="cast-badge">CO-LEAD</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>Ayesha</h3>
+            <p class="role">Owner of the Phone · Age 22</p>
+            <p class="bio">Fighting to save her seven-year-old brother in intensive care while holding digital evidence that powerful political figures want erased at any cost.</p>
+          </div>
         </article>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/father.webp" alt="Abbu, Sameer’s father who needs urgent heart surgery" loading="lazy" decoding="async" />
-          <h3>Abbu</h3><p class="role">Sameer's father, 55</p>
-          <p class="bio">Suffers a sudden heart attack, and the family must find five lakh rupees for his operation.</p>
+
+        <article class="cast-card reveal" data-faction="family">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/father.webp" alt="Abbu, Sameer’s father who needs urgent heart surgery" loading="lazy" decoding="async" />
+            <span class="cast-badge">FAMILY</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>Abbu</h3>
+            <p class="role">Sameer’s Father · Age 55</p>
+            <p class="bio">Frail and quiet-spoken, his sudden cardiac collapse triggers the urgent five-lakh-rupee surgery deadline that drives Sameer into the night.</p>
+          </div>
         </article>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/zoya.webp" alt="Zoya, Sameer’s younger sister" loading="lazy" decoding="async" />
-          <h3>Zoya</h3><p class="role">Sister, 14</p>
-          <p class="bio">A schoolgirl who asks Sameer for money for her fees, and is frightened when their father falls ill.</p>
+
+        <article class="cast-card reveal" data-faction="family">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/zoya.webp" alt="Zoya, Sameer’s younger sister" loading="lazy" decoding="async" />
+            <span class="cast-badge">FAMILY</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>Zoya</h3>
+            <p class="role">Sameer’s Sister · Age 14</p>
+            <p class="bio">A diligent schoolgirl hesitant to burden her brother with school fees, who holds the family together at the hospital bedside when their father collapses.</p>
+          </div>
         </article>
-        <h3 class="cast-group-heading">Supporting cast</h3>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/dadi.webp" alt="Dadi, Sameer’s grandmother" loading="lazy" decoding="async" />
-          <h3>Dadi</h3><p class="role">Grandmother, 75</p>
-          <p class="bio">Prays for the family through every hard moment, with her prayer beads in hand.</p>
+
+        <article class="cast-card reveal" data-faction="family">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/dadi.webp" alt="Dadi, Sameer’s grandmother" loading="lazy" decoding="async" />
+            <span class="cast-badge">FAMILY</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>Dadi</h3>
+            <p class="role">Grandmother · Age 75</p>
+            <p class="bio">The spiritual anchor of Sameer’s cramped Karachi home, keeping vigil with her tasbih prayer beads through every hour of the crisis.</p>
+          </div>
         </article>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/doctor.webp" alt="The doctor treating Sameer’s father" loading="lazy" decoding="async" />
-          <h3>The Doctor</h3><p class="role">Hospital doctor</p>
-          <p class="bio">Tells the family that the father's condition is serious and that the operation must happen at once.</p>
+
+        <article class="cast-card reveal" data-faction="hospital">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/doctor.webp" alt="The doctor treating Sameer’s father" loading="lazy" decoding="async" />
+            <span class="cast-badge">HOSPITAL</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>The Doctor</h3>
+            <p class="role">Attending Cardiologist</p>
+            <p class="bio">Delivers the stark medical prognosis in the emergency ward and oversees the life-saving surgical intervention once funds are secured.</p>
+          </div>
         </article>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/little_brother.webp" alt="Ayesha’s younger brother in intensive care" loading="lazy" decoding="async" />
-          <h3>Little Brother</h3><p class="role">Ayesha's brother, 7</p>
-          <p class="bio">Lies in intensive care, and his surgery depends on the digital keys stored on the phone.</p>
+
+        <article class="cast-card reveal" data-faction="hospital">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/little_brother.webp" alt="Ayesha’s younger brother in intensive care" loading="lazy" decoding="async" />
+            <span class="cast-badge">HOSPITAL</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>Little Brother</h3>
+            <p class="role">Ayesha’s Brother · Age 7</p>
+            <p class="bio">Hooked to ICU monitors, his survival depends on the hospital payment authorization locked inside the stolen smartphone.</p>
+          </div>
         </article>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/follower.webp" alt="A gang member following Sameer" loading="lazy" decoding="async" />
-          <h3>The Follower</h3><p class="role">Gang member</p>
-          <p class="bio">A loyal follower of the gang who tracks Sameer to the hospital car park and tries to take the phone.</p>
+
+        <article class="cast-card reveal" data-faction="syndicate">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/follower.webp" alt="A gang member following Sameer" loading="lazy" decoding="async" />
+            <span class="cast-badge">SYNDICATE</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>The Follower</h3>
+            <p class="role">Syndicate Operative</p>
+            <p class="bio">Tracks Sameer’s motorbike into the hospital car park and initiates the confrontation to retrieve the minister’s compromised device.</p>
+          </div>
         </article>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/guard1.webp" alt="A gang bodyguard leading the search for the phone" loading="lazy" decoding="async" />
-          <h3>The Guard</h3><p class="role">Gang bodyguard</p>
-          <p class="bio">Leads the search for the phone, confronts Sameer, and orders the chase through the city.</p>
+
+        <article class="cast-card reveal" data-faction="syndicate">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/guard1.webp" alt="A gang bodyguard leading the search for the phone" loading="lazy" decoding="async" />
+            <span class="cast-badge">SYNDICATE</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>Lead Guard</h3>
+            <p class="role">Enforcer Commander</p>
+            <p class="bio">Commands the street-level hunt across Karachi, cornering Sameer and ordering the relentless pursuit when he escapes on foot.</p>
+          </div>
         </article>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/guard2.webp" alt="A second gang bodyguard beside the black Land Cruiser" loading="lazy" decoding="async" />
-          <h3>Second Guard</h3><p class="role">Gang bodyguard</p>
-          <p class="bio">Keeps watch from the black Land Cruiser and joins the chase when Sameer runs.</p>
+
+        <article class="cast-card reveal" data-faction="syndicate">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/guard2.webp" alt="A second gang bodyguard beside the black Land Cruiser" loading="lazy" decoding="async" />
+            <span class="cast-badge">SYNDICATE</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>Second Guard</h3>
+            <p class="role">Tactical Enforcer</p>
+            <p class="bio">Operates the black Land Cruiser convoy, sweeping Karachi’s intersections to intercept the leaked evidence before it reaches the newsroom.</p>
+          </div>
         </article>
-        <article class="cast-card reveal">
-          <img class="cast-photo" src="cast/tv_anchor.webp" alt="A television news anchor reporting the minister’s arrest" loading="lazy" decoding="async" />
-          <h3>News Anchor</h3><p class="role">Television presenter</p>
-          <p class="bio">Reports the arrest of the minister, which shows that the truth on the phone has come out.</p>
+
+        <article class="cast-card reveal" data-faction="syndicate">
+          <div class="cast-photo-wrap">
+            <img class="cast-photo" src="cast/tv_anchor.webp" alt="A television news anchor reporting the minister’s arrest" loading="lazy" decoding="async" />
+            <span class="cast-badge">PRESS</span>
+          </div>
+          <div class="cast-card-body">
+            <h3>News Anchor</h3>
+            <p class="role">Prime-Time Broadcast Journalist</p>
+            <p class="bio">Breaks the nationwide television bulletin announcing the minister’s arrest after the evidence from the phone is broadcast across Pakistan.</p>
+          </div>
         </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTION EXPLORER BANNER -->
+    <section class="explore-strip reveal" aria-label="Explore production archives">
+      <div class="explore-card">
+        <p class="eyebrow">01 · Visual Continuity</p>
+        <h3>80-Scene Storyboard Archive</h3>
+        <p>Inspect every keyframe still with scene locations, character callouts, Urdu voice-over dialogue, and interactive lightbox navigation.</p>
+        <a class="button primary" href="storyboard.html">Open Storyboard <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="explore-card">
+        <p class="eyebrow">02 · Generative Direction</p>
+        <h3>159 Production Prompts</h3>
+        <p>Search and copy the exact 35mm camera direction, lighting, and lip-sync prompts engineered for MiniMax Hailuo H3 and Seedance.</p>
+        <a class="button" href="prompts.html">Explore Prompts <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="explore-card">
+        <p class="eyebrow">03 · Credits &amp; Supervision</p>
+        <h3>The Production Team</h3>
+        <p>Meet Faculty Supervisor Prof. Engr. Imran Alvi and the six computer science filmmakers who built The Karachi Siege.</p>
+        <a class="button" href="team.html">View Credits <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <span>THE KARACHI SIEGE<span class="brand-mark">.</span></span>
-    <span>AN AI FILM PROJECT <span class="footer-separator">/</span> KARACHI, PAKISTAN</span>
+    <span>OFFICIAL AI FEATURE FILM &amp; ARCHIVE <span class="footer-separator">/</span> KARACHI, PAKISTAN</span>
   </footer>
   <script type="module" src="home.js"></script>
   <script type="module" src="theme.js"></script>

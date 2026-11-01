@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prompts · The Karachi Siege</title>
-  <meta name="description" content="Explore 159 MiniMax Hailuo H3 video prompts across 80 scenes of The Karachi Siege." />
+  <title>Prompts Archive · 159 Clips · The Karachi Siege</title>
+  <meta name="description" content="Explore 159 MiniMax Hailuo H3 and Seedance video prompts across 80 scenes of The Karachi Siege." />
+  <meta name="theme-color" content="#0d0c0b" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -13,28 +14,49 @@
     <a class="brand" href="index.html">THE KARACHI SIEGE<span class="brand-mark">.</span></a>
     <nav aria-label="Primary">
       <a href="index.html">Home</a>
+      <a href="index.html#watch">Trailer &amp; Film</a>
       <a href="index.html#cast">Cast</a>
       <a href="storyboard.html">Storyboard</a>
       <a href="prompts.html" aria-current="page">Prompts</a>
       <a href="team.html">Team</a>
     </nav>
-    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="theme-toggle-label">Dark mode</span></button>
+    <div class="header-actions">
+      <a class="header-cta" href="index.html#trailer-player"><span aria-hidden="true">▶</span> Trailer</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+        <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+        <span class="theme-toggle-label">Light mode</span>
+      </button>
+    </div>
   </header>
+
   <main>
     <section class="prompts" aria-labelledby="prompts-title">
       <div class="section-head reveal">
-        <p class="eyebrow">Behind the film</p>
-        <h1 id="prompts-title">The creative process<span class="accent-dot">.</span></h1>
-        <p class="page-intro">159 clips across 80 scenes, generated with MiniMax Hailuo H3. Browse the production prompts and copy any clip prompt to reuse it.</p>
+        <p class="eyebrow">Generative Direction · 159 Production Prompts</p>
+        <h1 id="prompts-title">The Prompt Archive<span class="accent-dot">.</span></h1>
+        <p class="page-intro">159 shots across 80 scenes, engineered for MiniMax Hailuo H3 and Seedance. Search by camera movement, character, location, or Urdu dialogue, and copy any prompt for study or reuse.</p>
       </div>
-      <p class="count prompt-count" id="prompt-count" aria-live="polite"></p>
-      <div class="filters" id="filters" role="group" aria-label="Filter prompts"></div>
+
+      <div class="archive-toolbar" role="region" aria-label="Search and filter prompts">
+        <div class="search-box">
+          <input
+            type="search"
+            id="prompt-search"
+            placeholder="Search 159 prompts by character, camera shot (e.g. EXTREME CLOSE-UP), location, or dialogue..."
+            aria-label="Search prompts"
+          />
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filter prompts by scene range"></div>
+        <p class="count prompt-count" id="prompt-count" aria-live="polite"></p>
+      </div>
+
       <div class="prompt-list" id="prompt-list"></div>
     </section>
   </main>
+
   <footer class="site-footer">
     <span>THE KARACHI SIEGE<span class="brand-mark">.</span></span>
-    <span>AN AI FILM PROJECT <span class="footer-separator">/</span> KARACHI, PAKISTAN</span>
+    <span>OFFICIAL AI FEATURE FILM &amp; ARCHIVE <span class="footer-separator">/</span> KARACHI, PAKISTAN</span>
   </footer>
   <script type="module" src="prompts-page.js"></script>
   <script type="module" src="theme.js"></script>
