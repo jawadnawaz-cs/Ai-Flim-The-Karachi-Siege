@@ -1810,12 +1810,10 @@ body {
   margin-left: auto; margin-right: auto;
 }
 .cast-card {
-  background: rgba(255,255,255,.62);
+  background: #ffffff;
   border: 1px solid rgba(255,255,255,.84);
   border-radius: 16px;
   box-shadow: 0 12px 34px rgba(72,55,38,.07);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 .cast-card h3 { color: #382c25; font-family: var(--serif); font-weight: 600; }
 .cast-card .role { color: #b85c08; }
@@ -1832,12 +1830,10 @@ body {
 .page-intro { color: #756a61; }
 .team-grid { gap: 14px; background: transparent; border: 0; }
 .member, .prompt-card {
-  background: rgba(255,255,255,.62);
+  background: #ffffff;
   border: 1px solid rgba(255,255,255,.86);
   border-radius: 16px;
   box-shadow: 0 12px 34px rgba(72,55,38,.07);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 .member h2, .prompt-meta h3 { color: #382c25; font-family: var(--serif); font-weight: 600; }
 .member .role, .prompt-cat, .prompt-row dt { color: #b85c08; }
@@ -1953,7 +1949,7 @@ body {
 :root[data-theme="dark"] .cast-card,
 :root[data-theme="dark"] .member,
 :root[data-theme="dark"] .prompt-card {
-  background: rgba(43,39,36,.76);
+  background: #2b2724;
   border-color: rgba(255,255,255,.12);
   box-shadow: 0 12px 34px rgba(0,0,0,.18);
 }
