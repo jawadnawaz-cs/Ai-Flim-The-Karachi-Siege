@@ -11,24 +11,59 @@
   <script>try{localStorage.removeItem("karachi-siege-theme");document.documentElement.dataset.theme=localStorage.getItem("karachi-siege-theme-v2")==="light"?"light":"dark";}catch(e){document.documentElement.dataset.theme="dark";}</script>
 </head>
 <body class="dark-mode">
-  <header class="site-header">
-    <a class="brand" href="index.html">THE KARACHI SIEGE<span class="brand-mark">.</span></a>
-    <nav aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="index.html#watch">Trailer &amp; Film</a>
-      <a href="index.html#cast">Cast</a>
-      <a href="storyboard.html" aria-current="page">Storyboard</a>
-      <a href="prompts.html">Prompts</a>
-      <a href="team.html">Team</a>
-    </nav>
-    <div class="header-actions">
-      <a class="header-cta" href="index.html#trailer-player"><span aria-hidden="true">▶</span> Trailer</a>
-      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
-        <span class="theme-toggle-icon" aria-hidden="true">☀</span>
-        <span class="theme-toggle-label">Light mode</span>
-      </button>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="index.html" aria-label="The Karachi Siege — Official AI Feature Film">
+      <span class="brand-emblem" aria-hidden="true">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 10V4H9M27 4H33V10M33 26V32H27M9 32H3V26" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 10H24L16.5 26H12.5L18.8 13.2H12V10Z" fill="currentColor"/>
+          <path d="M21.5 14.5H24V16.8H21.5V14.5ZM20 18.8H22.5V21.1H20V18.8ZM18.5 23.1H21V25.4H18.5V23.1Z" fill="currentColor" opacity="0.85"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-title">The Karachi Siege</span>
+        <span class="brand-subtitle">AI FEATURE FILM</span>
+      </span>
+    </a>
+
+    <button
+      class="mobile-menu-toggle"
+      id="mobile-menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="primary-nav-drawer"
+    >
+      <span class="menu-bars" aria-hidden="true">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </span>
+    </button>
+
+    <div class="nav-drawer" id="primary-nav-drawer">
+      <div class="nav-drawer-header">
+        <span class="nav-drawer-eyebrow">NAVIGATION · ALL PAGES</span>
+      </div>
+      <nav aria-label="Primary">
+        <a href="index.html"><span class="nav-idx">01</span><span>Home</span></a>
+        <a href="index.html#watch"><span class="nav-idx">02</span><span>Trailer &amp; Film</span></a>
+        <a href="index.html#story"><span class="nav-idx">03</span><span>Story Acts</span></a>
+        <a href="index.html#cast"><span class="nav-idx">04</span><span>Cast</span></a>
+        <a href="storyboard.html" aria-current="page"><span class="nav-idx">05</span><span>Storyboard</span></a>
+        <a href="prompts.html"><span class="nav-idx">06</span><span>Prompts</span></a>
+        <a href="team.html"><span class="nav-idx">07</span><span>Team</span></a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-cta" href="index.html#trailer-player"><span aria-hidden="true">▶</span> Watch Trailer</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+          <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+          <span class="theme-toggle-label">Light mode</span>
+        </button>
+      </div>
     </div>
   </header>
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" hidden></div>
 
   <main>
     <section class="storyboard" aria-labelledby="storyboard-title">

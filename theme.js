@@ -37,3 +37,49 @@ toggle?.addEventListener("click", () => {
     // Theme still works for this page if storage is unavailable.
   }
 });
+
+// 3-Line Mobile Menu Drawer Controller (works across all pages)
+const mobileMenuBtn = document.getElementById("mobile-menu-toggle");
+const navDrawer = document.getElementById("primary-nav-drawer");
+const navBackdrop = document.getElementById("mobile-nav-backdrop");
+const siteHeader = document.getElementById("site-header") || document.querySelector(".site-header");
+
+function setMobileMenuOpen(open) {
+  const isOpen = Boolean(open);
+  siteHeader?.classList.toggle("menu-open", isOpen);
+  document.body.classList.toggle("mobile-nav-locked", isOpen);
+  if (mobileMenuBtn) {
+    mobileMenuBtn.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuBtn.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  }
+  if (navBackdrop) {
+    navBackdrop.hidden = !isOpen;
+  }
+}
+
+mobileMenuBtn?.addEventListener("click", () => {
+  const currentlyOpen = siteHeader?.classList.contains("menu-open");
+  setMobileMenuOpen(!currentlyOpen);
+});
+
+navBackdrop?.addEventListener("click", () => {
+  setMobileMenuOpen(false);
+});
+
+navDrawer?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    setMobileMenuOpen(false);
+  });
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && siteHeader?.classList.contains("menu-open")) {
+    setMobileMenuOpen(false);
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 860 && siteHeader?.classList.contains("menu-open")) {
+    setMobileMenuOpen(false);
+  }
+});

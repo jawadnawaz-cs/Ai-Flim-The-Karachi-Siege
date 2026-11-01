@@ -18,279 +18,213 @@
   <script>try{localStorage.removeItem("karachi-siege-theme");document.documentElement.dataset.theme=localStorage.getItem("karachi-siege-theme-v2")==="light"?"light":"dark";}catch(e){document.documentElement.dataset.theme="dark";}</script>
 </head>
 <body class="dark-mode">
-  <header class="site-header">
-    <a class="brand" href="index.html">THE KARACHI SIEGE<span class="brand-mark">.</span></a>
-    <nav aria-label="Primary">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="#watch">Trailer &amp; Film</a>
-      <a href="#story">Story Acts</a>
-      <a href="#cast">Cast</a>
-      <a href="storyboard.html">Storyboard</a>
-      <a href="prompts.html">Prompts</a>
-      <a href="team.html">Team</a>
-    </nav>
-    <div class="header-actions">
-      <a class="header-cta" href="#trailer-player"><span aria-hidden="true">▶</span> Trailer</a>
-      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
-        <span class="theme-toggle-icon" aria-hidden="true">☀</span>
-        <span class="theme-toggle-label">Light mode</span>
-      </button>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="index.html" aria-label="The Karachi Siege — Official AI Feature Film">
+      <span class="brand-emblem" aria-hidden="true">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 10V4H9M27 4H33V10M33 26V32H27M9 32H3V26" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 10H24L16.5 26H12.5L18.8 13.2H12V10Z" fill="currentColor"/>
+          <path d="M21.5 14.5H24V16.8H21.5V14.5ZM20 18.8H22.5V21.1H20V18.8ZM18.5 23.1H21V25.4H18.5V23.1Z" fill="currentColor" opacity="0.85"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-title">The Karachi Siege</span>
+        <span class="brand-subtitle">AI FEATURE FILM</span>
+      </span>
+    </a>
+
+    <button
+      class="mobile-menu-toggle"
+      id="mobile-menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="primary-nav-drawer"
+    >
+      <span class="menu-bars" aria-hidden="true">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </span>
+    </button>
+
+    <div class="nav-drawer" id="primary-nav-drawer">
+      <div class="nav-drawer-header">
+        <span class="nav-drawer-eyebrow">NAVIGATION · ALL PAGES</span>
+      </div>
+      <nav aria-label="Primary">
+        <a href="index.html" aria-current="page"><span class="nav-idx">01</span><span>Home</span></a>
+        <a href="#watch"><span class="nav-idx">02</span><span>Trailer &amp; Film</span></a>
+        <a href="#story"><span class="nav-idx">03</span><span>Story Acts</span></a>
+        <a href="#cast"><span class="nav-idx">04</span><span>Cast</span></a>
+        <a href="storyboard.html"><span class="nav-idx">05</span><span>Storyboard</span></a>
+        <a href="prompts.html"><span class="nav-idx">06</span><span>Prompts</span></a>
+        <a href="team.html"><span class="nav-idx">07</span><span>Team</span></a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-cta" href="#trailer-player"><span aria-hidden="true">▶</span> Watch Trailer</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+          <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+          <span class="theme-toggle-label">Light mode</span>
+        </button>
+      </div>
     </div>
   </header>
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" hidden></div>
 
   <main>
     <!-- HERO SECTION -->
     <section class="hero" id="top">
       <div class="hero-inner">
         <div class="hero-copy">
-          <div class="festival-badges reveal">
-            <span class="festival-pill"><span class="signal-dot"></span> OFFICIAL AI FEATURE FILM</span>
-            <span class="festival-pill">KARACHI NOIR THRILLER</span>
-            <span class="festival-pill">80 SCENES · 159 SHOTS</span>
-          </div>
-          <p class="eyebrow reveal"><span class="eyebrow-line"></span> Set in the streets of Karachi, Pakistan</p>
+          <p class="eyebrow reveal"><span class="signal-dot"></span> OFFICIAL AI FEATURE FILM · KARACHI, PAKISTAN</p>
           <h1 class="reveal">THE KARACHI<br /><em>SIEGE</em></h1>
           <p class="hero-tagline reveal">One stolen phone. Two lives in intensive care. A city-sized conspiracy.</p>
           <p class="logline reveal">
-            When his father collapses with a sudden heart failure requiring five lakh rupees for immediate surgery, 20-year-old delivery rider Sameer snatches a phone at a Karachi traffic signal—unaware it holds both a child’s life-saving hospital funds and incriminating evidence against a powerful minister.
+            When his father collapses with sudden heart failure requiring five lakh rupees for emergency surgery, 20-year-old delivery rider Sameer snatches a phone at a Karachi red light—unaware it holds both a child’s life-saving hospital funds and incriminating evidence against a sitting minister.
           </p>
           <div class="actions reveal">
             <a class="button primary" href="#trailer-player" data-watch-target="trailer">
-              <span class="play-icon" aria-hidden="true">▶</span> Watch Official Trailer
+              <span class="play-icon" aria-hidden="true">▶</span> Watch Trailer
             </a>
             <a class="button secondary-cta" href="#movie-player" data-watch-target="movie">
-              <span class="play-icon" aria-hidden="true">▶</span> Watch Full Movie
-            </a>
-            <a class="button" href="storyboard.html">
-              80-Scene Storyboard <span aria-hidden="true">↗</span>
+              <span class="play-icon" aria-hidden="true">▶</span> Watch Full Film
             </a>
           </div>
           <div class="hero-meta reveal" aria-label="Film specifications">
-            <span><b>GENRE</b> Crime / Urban Thriller</span>
-            <span><b>LANGUAGE</b> Urdu / Roman Script</span>
-            <span><b>PRODUCTION</b> 159 AI Video Clips</span>
-            <span><b>LOCATION</b> Karachi, Pakistan</span>
+            <span><b>GENRE</b> Crime Thriller</span>
+            <span><b>LANGUAGE</b> Urdu</span>
+            <span><b>SCENES</b> 80 Keyframes</span>
+            <span><b>PRODUCTION</b> 159 AI Shots</span>
           </div>
         </div>
-        <a class="scroll-cue" href="#watch" aria-label="Scroll to screening room"><span></span> ENTER SCREENING ROOM</a>
       </div>
     </section>
 
     <!-- SCREENING ROOM: 1. OFFICIAL TRAILER FIRST, 2. FULL MOVIE SECOND -->
     <section class="watch" id="watch" aria-labelledby="watch-title">
-      <div class="screening-topbar reveal">
-        <div class="section-head">
-          <p class="eyebrow">Theatrical Screening Room</p>
-          <h2 id="watch-title">Official Trailer &amp; Full Feature<span class="accent-dot">.</span></h2>
-        </div>
-        <div class="screening-controls">
-          <div class="screening-tabs" role="group" aria-label="Jump to video player">
-            <a class="screen-tab is-active" href="#trailer-player" data-screen-nav="trailer">01 · Official Trailer</a>
-            <a class="screen-tab" href="#movie-player" data-screen-nav="movie">02 · Watch Full Movie</a>
-          </div>
-          <button class="theater-btn" id="theater-toggle" type="button" aria-pressed="false">
-            <span aria-hidden="true">◐</span> Theater Mode
-          </button>
-        </div>
+      <div class="section-head centered-head reveal">
+        <p class="eyebrow">SCREENING ROOM</p>
+        <h2 id="watch-title">Official Trailer &amp; Full Movie<span class="accent-dot">.</span></h2>
       </div>
 
-      <!-- STEP 1: OFFICIAL TRAILER AT START -->
-      <article class="cinema-showcase trailer-showcase reveal" id="trailer-player">
-        <div class="showcase-header">
-          <div class="showcase-badge-group">
-            <span class="showcase-step">PART 01 · START HERE</span>
-            <span class="showcase-status"><span class="signal-dot"></span> OFFICIAL TRAILER</span>
-          </div>
-          <div class="showcase-title-row">
-            <div>
-              <h3>The Karachi Siege — Official Trailer</h3>
-              <p class="showcase-sub">First look at Sameer’s race against time across Karachi’s neon-lit intersections, hospital corridors, and back-alley chases.</p>
+      <div class="screening-stack">
+        <!-- STEP 1: OFFICIAL TRAILER -->
+        <article class="cinema-showcase trailer-showcase reveal" id="trailer-player">
+          <div class="showcase-bar">
+            <div class="showcase-bar-left">
+              <span class="showcase-num">01</span>
+              <div>
+                <h3>Official Trailer</h3>
+                <p class="showcase-sub">First look at Sameer’s race against time across Karachi.</p>
+              </div>
             </div>
             <a class="yt-external-link" href="https://youtu.be/fCb20QfOTT0" target="_blank" rel="noopener noreferrer">
-              Open Trailer on YouTube <span aria-hidden="true">↗</span>
+              YouTube <span aria-hidden="true">↗</span>
             </a>
           </div>
-        </div>
 
-        <div class="video-frame">
-          <div class="frame-timecode" aria-hidden="true">
-            <span>REEL 01 // OFFICIAL TRAILER</span>
-            <span>TC 00:00:00:00 · 24FPS</span>
+          <div class="video-frame">
+            <button class="video-poster" id="trailer-play" type="button" aria-label="Play The Karachi Siege Official Trailer">
+              <img
+                src="https://i.ytimg.com/vi/fCb20QfOTT0/maxresdefault.jpg"
+                onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/fCb20QfOTT0/hqdefault.jpg';"
+                alt="The Karachi Siege Official Trailer poster"
+                fetchpriority="high"
+              />
+              <span class="poster-play-icon" aria-hidden="true">▶</span>
+              <span class="poster-play-label">Play Official Trailer</span>
+            </button>
+            <iframe
+              id="trailer"
+              data-src="https://www.youtube-nocookie.com/embed/fCb20QfOTT0?playsinline=1&rel=0"
+              title="The Karachi Siege — Official Trailer"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
-          <button class="video-poster" id="trailer-play" type="button" aria-label="Play The Karachi Siege Official Trailer">
-            <img
-              src="https://i.ytimg.com/vi/fCb20QfOTT0/maxresdefault.jpg"
-              onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/fCb20QfOTT0/hqdefault.jpg';"
-              alt="The Karachi Siege Official Trailer poster"
-              fetchpriority="high"
-            />
-            <span class="poster-badge">01 · OFFICIAL TEASER TRAILER</span>
-            <span class="poster-play-icon" aria-hidden="true">▶</span>
-            <span class="poster-play-label">Play Official Trailer</span>
-          </button>
-          <iframe
-            id="trailer"
-            data-src="https://www.youtube-nocookie.com/embed/fCb20QfOTT0?playsinline=1&rel=0"
-            title="The Karachi Siege — Official Trailer"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="showcase-footer">
-          <p class="watch-caption">THE KARACHI SIEGE <span>·</span> OFFICIAL THEATRICAL TRAILER (YOUTUBE: fCb20QfOTT0)</p>
-          <a class="next-feature-link" href="#movie-player">Continue to Full Movie below <span aria-hidden="true">↓</span></a>
-        </div>
-      </article>
+        </article>
 
-      <!--Connector between Trailer and Full Movie-->
-      <div class="screening-divider reveal" aria-hidden="true">
-        <span class="divider-line"></span>
-        <span class="divider-pill">THEN WATCH THE COMPLETE FEATURE FILM</span>
-        <span class="divider-line"></span>
-      </div>
-
-      <!-- STEP 2: WATCH FULL MOVIE -->
-      <article class="cinema-showcase feature-showcase reveal" id="movie-player">
-        <div class="showcase-header">
-          <div class="showcase-badge-group">
-            <span class="showcase-step">PART 02 · MAIN FEATURE</span>
-            <span class="showcase-status feature-pill">COMPLETE 80-SCENE FILM</span>
-          </div>
-          <div class="showcase-title-row">
-            <div>
-              <h3>Watch Full Movie — The Karachi Siege</h3>
-              <p class="showcase-sub">Experience the complete 80-scene AI feature film from Sameer’s 6:00 AM shift to the final broadcast that shakes Karachi.</p>
+        <!-- STEP 2: WATCH FULL MOVIE -->
+        <article class="cinema-showcase feature-showcase reveal" id="movie-player">
+          <div class="showcase-bar">
+            <div class="showcase-bar-left">
+              <span class="showcase-num">02</span>
+              <div>
+                <h3>Full Feature Film</h3>
+                <p class="showcase-sub">Complete 80-scene AI thriller from the 6:00 AM shift to the final broadcast.</p>
+              </div>
             </div>
             <a class="yt-external-link" href="https://www.youtube.com/watch?v=B6pu8312X1o" target="_blank" rel="noopener noreferrer">
-              Open Full Movie on YouTube <span aria-hidden="true">↗</span>
+              YouTube <span aria-hidden="true">↗</span>
             </a>
           </div>
-        </div>
 
-        <div class="video-frame">
-          <div class="frame-timecode" aria-hidden="true">
-            <span>REEL 02 // FULL FEATURE FILM</span>
-            <span>80 SCENES · 159 CLIPS</span>
-          </div>
-          <button class="video-poster" id="film-play" type="button" aria-label="Play The Karachi Siege full film">
-            <img
-              src="https://i.ytimg.com/vi/B6pu8312X1o/maxresdefault.jpg"
-              onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/B6pu8312X1o/hqdefault.jpg';"
-              alt="The Karachi Siege Full Movie poster"
+          <div class="video-frame">
+            <button class="video-poster" id="film-play" type="button" aria-label="Play The Karachi Siege full film">
+              <img
+                src="https://i.ytimg.com/vi/B6pu8312X1o/maxresdefault.jpg"
+                onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/B6pu8312X1o/hqdefault.jpg';"
+                alt="The Karachi Siege Full Movie poster"
+                loading="lazy"
+              />
+              <span class="poster-play-icon" aria-hidden="true">▶</span>
+              <span class="poster-play-label">Watch Full Movie</span>
+            </button>
+            <iframe
+              id="film"
+              data-src="https://www.youtube-nocookie.com/embed/B6pu8312X1o?playsinline=1&rel=0"
+              title="The Karachi Siege, full film"
               loading="lazy"
-            />
-            <span class="poster-badge">02 · FULL FEATURE PRESENTATION</span>
-            <span class="poster-play-icon" aria-hidden="true">▶</span>
-            <span class="poster-play-label">Watch Full Movie</span>
-          </button>
-          <iframe
-            id="film"
-            data-src="https://www.youtube-nocookie.com/embed/B6pu8312X1o?playsinline=1&rel=0"
-            title="The Karachi Siege, full film"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <!-- Chapter / Act Guide for the Full Film -->
-        <div class="film-chapters" aria-label="Film acts and chapters">
-          <div class="chapter-pill">
-            <span class="chapter-num">ACT I · SCENES 01–20</span>
-            <strong>The 6 AM Shift &amp; Abbu’s Collapse</strong>
-            <span>00:00 – 05:00</span>
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
-          <div class="chapter-pill">
-            <span class="chapter-num">ACT II · SCENES 21–40</span>
-            <strong>The Red Light &amp; Stolen Phone</strong>
-            <span>05:00 – 10:00</span>
-          </div>
-          <div class="chapter-pill">
-            <span class="chapter-num">ACT III · SCENES 41–60</span>
-            <strong>Land Cruisers &amp; Hospital Siege</strong>
-            <span>10:00 – 15:00</span>
-          </div>
-          <div class="chapter-pill">
-            <span class="chapter-num">ACT IV · SCENES 61–80</span>
-            <strong>Redemption &amp; State Broadcast</strong>
-            <span>15:00 – End</span>
-          </div>
-        </div>
-        <p class="watch-caption">THE KARACHI SIEGE <span>·</span> COMPLETE AI FEATURE FILM (YOUTUBE: B6pu8312X1o)</p>
-      </article>
+        </article>
+      </div>
     </section>
 
     <!-- STORY & 4-ACT BREAKDOWN -->
     <section class="about story-brief" id="story" aria-labelledby="story-title">
       <div class="about-inner">
         <div class="story-overview reveal">
-          <p class="eyebrow">Narrative Architecture · Karachi, Pakistan</p>
+          <p class="eyebrow">SYNOPSIS &amp; STRUCTURE</p>
           <h2 id="story-title">One ordinary night. A city-changing secret<span class="accent-dot">.</span></h2>
           <p class="about-copy">
             Sameer, a twenty-year-old delivery rider supporting his ailing father, younger sister Zoya, and elderly Dadi, is pushed to the brink when his father suffers a critical heart attack requiring five lakh rupees for immediate surgery. At a jammed Karachi traffic signal, a split-second mistake pulls him into the crosshairs of an armed political syndicate.
           </p>
-          <p class="story-note">
-            “Between two hospital beds and a stolen screen, one rider has to choose whether desperation will break him—or wake up an entire city.”
-          </p>
           <div class="story-stats">
-            <div><strong>80</strong><span>Keyframed Scenes</span></div>
-            <div><strong>159</strong><span>Generated Shots</span></div>
-            <div><strong>11</strong><span>Core Characters</span></div>
+            <div><strong>80</strong><span>Scenes</span></div>
+            <div><strong>159</strong><span>AI Shots</span></div>
+            <div><strong>11</strong><span>Characters</span></div>
             <div><strong>4</strong><span>Dramatic Acts</span></div>
           </div>
         </div>
 
-        <div class="acts-grid">
-          <article class="act-card reveal">
-            <div class="act-thumb">
-              <img src="stills/scene_01.webp" alt="Scene 01 still — Sameer's cramped bedroom in Karachi" loading="lazy" />
-              <span class="act-tag">ACT I · SCENES 01–20</span>
-            </div>
-            <div class="act-body">
-              <h3>The Weight of Five Lakh</h3>
-              <p>From a 6:00 AM alarm in a cramped Karachi flat to scorching afternoon delivery shifts, Sameer’s fragile routine shatters when Zoya calls in panic: Abbu has collapsed and needs immediate heart surgery.</p>
-              <a href="storyboard.html?act=1" class="act-link">View Act I Stills <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="act-card reveal">
-            <div class="act-thumb">
-              <img src="stills/scene_20.webp" alt="Scene 20 still — Karachi traffic signal at dusk" loading="lazy" />
-              <span class="act-tag">ACT II · SCENES 21–40</span>
-            </div>
-            <div class="act-body">
-              <h3>Signal Red &amp; The Stolen Phone</h3>
-              <p>Cornered by hospital billing deadlines, Sameer snatches a phone through a car window at a red light—only to discover its owner, Ayesha, is trying to pay for her seven-year-old brother’s ICU surgery.</p>
-              <a href="storyboard.html?act=2" class="act-link">View Act II Stills <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="act-card reveal">
-            <div class="act-thumb">
-              <img src="stills/scene_45.webp" alt="Scene 45 still — The gang pursuit in Karachi" loading="lazy" />
-              <span class="act-tag">ACT III · SCENES 41–60</span>
-            </div>
-            <div class="act-body">
-              <h3>Black Land Cruisers in Pursuit</h3>
-              <p>The phone contains more than hospital keys—it holds encrypted corruption evidence against a sitting minister. Armed guards track Sameer across Karachi’s alleys and hospital parking decks.</p>
-              <a href="storyboard.html?act=3" class="act-link">View Act III Stills <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="act-card reveal">
-            <div class="act-thumb">
-              <img src="stills/scene_75.webp" alt="Scene 75 still — Breaking news broadcast" loading="lazy" />
-              <span class="act-tag">ACT IV · SCENES 61–80</span>
-            </div>
-            <div class="act-body">
-              <h3>The Truth Reaches the City</h3>
-              <p>Risking his life to return the phone to Ayesha and leak the minister’s files to the press, Sameer turns a moment of guilt into redemption—saving both families as breaking news rocks Karachi.</p>
-              <a href="storyboard.html?act=4" class="act-link">View Act IV Stills <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
+        <div class="acts-grid clean-acts-grid">
+          <a href="storyboard.html?act=1" class="act-minimal-card reveal">
+            <span class="act-minimal-num">ACT I · SCENES 01–20</span>
+            <h3>The Weight of Five Lakh</h3>
+            <p>Sameer’s 6:00 AM routine in a cramped Karachi flat shatters when Zoya calls in panic: Abbu has collapsed and needs immediate heart surgery.</p>
+          </a>
+          <a href="storyboard.html?act=2" class="act-minimal-card reveal">
+            <span class="act-minimal-num">ACT II · SCENES 21–40</span>
+            <h3>Signal Red &amp; The Stolen Phone</h3>
+            <p>Cornered by hospital deadlines, Sameer snatches a phone at a red light—discovering its owner, Ayesha, is trying to fund her little brother’s ICU surgery.</p>
+          </a>
+          <a href="storyboard.html?act=3" class="act-minimal-card reveal">
+            <span class="act-minimal-num">ACT III · SCENES 41–60</span>
+            <h3>Land Cruisers in Pursuit</h3>
+            <p>The phone also holds encrypted corruption evidence against a sitting minister. Armed enforcers hunt Sameer across Karachi’s alleys and hospital parking decks.</p>
+          </a>
+          <a href="storyboard.html?act=4" class="act-minimal-card reveal">
+            <span class="act-minimal-num">ACT IV · SCENES 61–80</span>
+            <h3>The Truth Reaches the City</h3>
+            <p>Returning the phone to Ayesha and leaking the minister’s files to the press, Sameer turns guilt into redemption as breaking news rocks Karachi.</p>
+          </a>
         </div>
       </div>
     </section>
