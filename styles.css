@@ -2106,3 +2106,12 @@ body {
  .team-person .bio{font-size:.86rem}
  .member-detail li,.tool-tags span{font-size:.7rem}
 }
+
+
+/* Team page title */
+.team .section-head{margin-bottom:18px}
+.team .team-page-title{margin:0;color:#d98232;font-size:clamp(3.8rem,10vw,7.5rem);line-height:.98;letter-spacing:-.055em;font-weight:800}
+.team .team-page-title .accent-dot{color:#d98232}
+:root[data-theme="dark"] .team .team-page-title,
+:root[data-theme="dark"] .team .team-page-title .accent-dot{color:#f0a04d}
+@media(max-width:600px){.team .team-page-title{font-size:clamp(3.5rem,17vw,5rem)}}
