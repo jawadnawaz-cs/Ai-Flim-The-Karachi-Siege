@@ -1575,6 +1575,24 @@ body { background: var(--bg); color: var(--text); }
   box-shadow: none;
 }
 .member:hover, .member:focus-within { transform: none; background: #211e1b; border-color: transparent; }
+.member:hover h2, .member:focus-within h2,
+.member:hover .member-roll, .member:focus-within .member-roll,
+.member:hover .role, .member:focus-within .role,
+.member:hover .bio, .member:focus-within .bio,
+.member:hover .member-detail h3, .member:focus-within .member-detail h3,
+.member:hover .member-tools h3, .member:focus-within .member-tools h3,
+.member:hover .member-detail li, .member:focus-within .member-detail li,
+.member:hover .tool-tags span, .member:focus-within .tool-tags span {
+  color: #f1eae2 !important;
+}
+.member:hover .member-detail li, .member:focus-within .member-detail li,
+.member:hover .tool-tags span, .member:focus-within .tool-tags span {
+  background: rgba(255,255,255,.055) !important;
+  border-color: rgba(255,255,255,.14) !important;
+}
+.member:hover .member-index, .member:focus-within .member-index {
+  color: #e7a45b !important;
+}
 .avatar {
   width: 42px; height: 42px;
   border: 1px solid rgba(193,91,76,.65);
