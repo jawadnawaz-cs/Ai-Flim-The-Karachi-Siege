@@ -2098,6 +2098,17 @@ body {
 :root[data-theme="dark"] .member-detail li,
 :root[data-theme="dark"] .tool-tags span{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.14);color:#e8ddd2}
 :root[data-theme="dark"] .supervisor-pending{color:#c1b5aa;border-color:rgba(255,255,255,.22)}
+/* Light mode: cards darken on hover — keep every text element readable */
+:root:not([data-theme="dark"]) .member{transition:background-color .25s ease,border-color .25s ease,box-shadow .25s ease}
+:root:not([data-theme="dark"]) .member :is(h2,.member-roll,.role,.bio,.member-index,h3,li,span){transition:color .25s ease,background-color .25s ease,border-color .25s ease}
+:root:not([data-theme="dark"]) .member:is(:hover,:focus-within){border-color:rgba(255,255,255,.08);box-shadow:0 18px 40px rgba(40,28,18,.22)}
+:root:not([data-theme="dark"]) .member:is(:hover,:focus-within) h2{color:#fbf6ef}
+:root:not([data-theme="dark"]) .member:is(:hover,:focus-within) .member-roll{color:#d8cdc2}
+:root:not([data-theme="dark"]) .member:is(:hover,:focus-within) .bio{color:#d6cabe}
+:root:not([data-theme="dark"]) .member:is(:hover,:focus-within) :is(.role,.member-index,.member-detail h3,.member-tools h3){color:#f0a04d}
+:root:not([data-theme="dark"]) .member:is(:hover,:focus-within) .avatar{background:rgba(240,160,77,.14);border-color:rgba(240,160,77,.6);color:#f4b46e}
+:root:not([data-theme="dark"]) .member:is(:hover,:focus-within) :is(.member-detail li,.tool-tags span){background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#f1e8de}
+:root:not([data-theme="dark"]) .member:is(:hover,:focus-within) :is(.member-detail,.member-tools){border-top-color:rgba(255,255,255,.14)}
 @media(max-width:900px){.team-people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){
  .team-people-grid{grid-template-columns:minmax(0,1fr);gap:13px}
