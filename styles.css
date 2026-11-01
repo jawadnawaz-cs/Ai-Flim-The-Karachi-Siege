@@ -3127,7 +3127,7 @@ body.theater-mode .cinema-showcase {
 }
 
 /* ==========================================================================
-   CINEMA VIEWFINDER BRAND LOCKUP, 3-LINE MOBILE MENU & CLEAN HOME LAYOUT
+   LEFT-ALIGNED FILM TITLE, RIGHT MODE SWITCH + 3-LINE MENU & CLEAN HOME
    ========================================================================== */
 
 .site-header {
@@ -3135,50 +3135,41 @@ body.theater-mode .cinema-showcase {
   top: 0 !important;
   z-index: 100 !important;
   display: flex !important;
+  flex-direction: row !important;
   align-items: center !important;
   justify-content: space-between !important;
   flex-wrap: nowrap !important;
   padding: 13px var(--pad) !important;
-  gap: 20px !important;
+  gap: 16px !important;
 }
 
 .site-header .brand {
   display: inline-flex !important;
-  align-items: center !important;
-  gap: 13px !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  text-align: left !important;
   text-decoration: none;
+  margin: 0 auto 0 0 !important;
   flex-shrink: 0;
-}
-
-.brand-emblem {
-  width: 38px;
-  height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #e09f50;
-  flex-shrink: 0;
-}
-
-.brand-emblem svg {
-  width: 100%;
-  height: 100%;
-  display: block;
 }
 
 .brand-text {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
   gap: 2px;
   line-height: 1.1;
 }
 
 .brand-title {
   font-family: var(--serif);
-  font-size: 1.16rem;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   color: var(--text);
+  text-align: left;
 }
 
 :root[data-theme="dark"] .brand-title {
@@ -3192,6 +3183,17 @@ body.theater-mode .cinema-showcase {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: #d69344;
+  text-align: left;
+}
+
+.header-right-controls {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 10px !important;
+  margin: 0 0 0 auto !important;
+  flex-shrink: 0 !important;
 }
 
 /* Desktop navigation layout */
@@ -3206,7 +3208,7 @@ body.theater-mode .cinema-showcase {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 24px;
+  gap: 22px;
   flex: 1;
 }
 
@@ -3363,7 +3365,15 @@ body.theater-mode .cinema-showcase {
   }
 
   .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
     padding: 12px 16px !important;
+    gap: 12px !important;
     background: rgba(250, 247, 241, 0.95) !important;
     border-bottom: 1px solid rgba(100, 78, 60, 0.14) !important;
     backdrop-filter: blur(20px) saturate(150%) !important;
@@ -3375,33 +3385,74 @@ body.theater-mode .cinema-showcase {
     border-bottom: 1px solid rgba(214, 147, 68, 0.18) !important;
   }
 
-  .brand-emblem {
-    width: 36px;
-    height: 36px;
+  .site-header .brand {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    margin: 0 auto 0 0 !important;
   }
 
   .brand-title {
-    font-size: 1.08rem;
+    font-size: 1.12rem;
+    text-align: left !important;
   }
 
   .brand-subtitle {
     font-size: 0.56rem;
     letter-spacing: 0.24em;
+    text-align: left !important;
   }
 
-  /* Circular 3-Line Menu Button (matches studio reference) */
+  .header-right-controls {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    margin: 0 0 0 auto !important;
+  }
+
+  /* Mode Switch Button next to 3-Line Button on Mobile */
+  .header-right-controls .theme-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    padding: 0 13px !important;
+    margin: 0 !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(180, 130, 75, 0.34) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: var(--text) !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+    flex-shrink: 0;
+  }
+
+  :root[data-theme="dark"] .header-right-controls .theme-toggle {
+    border-color: rgba(214, 147, 68, 0.34) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #f6efe7 !important;
+  }
+
+  /* Circular 3-Line Menu Button on the far right */
   .mobile-menu-toggle {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     border: 1px solid rgba(180, 130, 75, 0.34);
     background: rgba(255, 255, 255, 0.04);
     color: var(--text);
     cursor: pointer;
     padding: 0;
+    margin: 0 !important;
     flex-shrink: 0;
     transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
   }
@@ -3449,22 +3500,22 @@ body.theater-mode .cinema-showcase {
   /* Slide-down All-Pages Drawer inside 3-Line Menu */
   .nav-drawer {
     position: fixed;
-    top: 69px;
+    top: 66px;
     left: 12px;
     right: 12px;
     z-index: 110;
     display: flex !important;
     flex-direction: column;
     align-items: stretch;
-    gap: 14px;
-    padding: 18px 16px;
+    gap: 10px;
+    padding: 16px;
     border-radius: 20px;
     background: rgba(252, 249, 244, 0.98);
     border: 1px solid rgba(120, 92, 66, 0.2);
     box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    max-height: calc(100dvh - 86px);
+    max-height: calc(100dvh - 82px);
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
@@ -3550,26 +3601,6 @@ body.theater-mode .cinema-showcase {
 
   :root:not([data-theme="dark"]) .nav-drawer nav a[aria-current="page"] {
     color: #b85c08 !important;
-  }
-
-  .nav-drawer .header-actions {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px !important;
-    width: 100%;
-    margin: 4px 0 0 !important;
-    padding-top: 12px;
-    border-top: 1px solid var(--line);
-  }
-
-  .nav-drawer .header-cta,
-  .nav-drawer .theme-toggle {
-    width: 100% !important;
-    min-height: 42px !important;
-    justify-content: center !important;
-    padding: 8px 12px !important;
-    font-size: 0.74rem !important;
-    margin: 0 !important;
   }
 
   .mobile-nav-backdrop {
