@@ -2072,3 +2072,37 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .video-poster img { transition: none; }
 }
+
+
+/* Named production team profiles */
+.team-people-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:18px}
+.team-person{min-width:0;min-height:100%;padding:clamp(20px,2.5vw,30px);gap:12px}
+.member-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:4px}
+.team-person .avatar,.supervisor-card .avatar{width:58px;height:58px;flex:0 0 58px;font-family:var(--sans);font-size:1rem;font-weight:700;letter-spacing:.04em}
+.member-index{font-size:.63rem;font-weight:700;letter-spacing:.16em;color:#a85b17}
+.team-person h2,.supervisor-card h2{font-size:clamp(1.25rem,2vw,1.55rem);line-height:1.2}
+.member-roll{margin:-7px 0 0;color:var(--muted);font-size:.78rem;font-weight:600;letter-spacing:.07em}
+.team-person .role{font-size:.69rem;letter-spacing:.09em;line-height:1.5}
+.team-person .bio{font-size:.88rem;line-height:1.75}
+.member-detail,.member-tools{padding-top:12px;border-top:1px solid var(--line)}
+.member-detail h3,.member-tools h3{margin:0 0 9px;font:700 .68rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#a85b17}
+.member-detail ul{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.member-detail li,.tool-tags span{display:inline-flex;align-items:center;padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.42);color:var(--text);font-size:.72rem;line-height:1.25}
+.tool-tags{display:flex;flex-wrap:wrap;gap:7px}
+.supervisor-card{justify-content:flex-start;border-style:dashed}
+.supervisor-avatar{font-size:1.35rem!important}
+.supervisor-pending{margin-top:auto;padding:12px;border:1px dashed var(--line);color:var(--muted);font-size:.78rem;line-height:1.5}
+:root[data-theme="dark"] .member-index,
+:root[data-theme="dark"] .member-detail h3,
+:root[data-theme="dark"] .member-tools h3{color:#e7a45b}
+:root[data-theme="dark"] .member-detail li,
+:root[data-theme="dark"] .tool-tags span{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.14);color:#e8ddd2}
+:root[data-theme="dark"] .supervisor-pending{color:#c1b5aa;border-color:rgba(255,255,255,.22)}
+@media(max-width:900px){.team-people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+ .team-people-grid{grid-template-columns:minmax(0,1fr);gap:13px}
+ .team-person{padding:21px;border-radius:14px}
+ .team-person h2,.supervisor-card h2{font-size:1.35rem}
+ .team-person .bio{font-size:.86rem}
+ .member-detail li,.tool-tags span{font-size:.7rem}
+}
