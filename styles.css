@@ -1575,6 +1575,24 @@ body { background: var(--bg); color: var(--text); }
   box-shadow: none;
 }
 .member:hover, .member:focus-within { transform: none; background: #211e1b; border-color: transparent; }
+.member:hover h2, .member:focus-within h2,
+.member:hover .member-roll, .member:focus-within .member-roll,
+.member:hover .role, .member:focus-within .role,
+.member:hover .bio, .member:focus-within .bio,
+.member:hover .member-detail h3, .member:focus-within .member-detail h3,
+.member:hover .member-tools h3, .member:focus-within .member-tools h3,
+.member:hover .member-detail li, .member:focus-within .member-detail li,
+.member:hover .tool-tags span, .member:focus-within .tool-tags span {
+  color: #f1eae2 !important;
+}
+.member:hover .member-detail li, .member:focus-within .member-detail li,
+.member:hover .tool-tags span, .member:focus-within .tool-tags span {
+  background: rgba(255,255,255,.055) !important;
+  border-color: rgba(255,255,255,.14) !important;
+}
+.member:hover .member-index, .member:focus-within .member-index {
+  color: #e7a45b !important;
+}
 .avatar {
   width: 42px; height: 42px;
   border: 1px solid rgba(193,91,76,.65);
@@ -1810,12 +1828,10 @@ body {
   margin-left: auto; margin-right: auto;
 }
 .cast-card {
-  background: rgba(255,255,255,.62);
+  background: #ffffff;
   border: 1px solid rgba(255,255,255,.84);
   border-radius: 16px;
   box-shadow: 0 12px 34px rgba(72,55,38,.07);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 .cast-card h3 { color: #382c25; font-family: var(--serif); font-weight: 600; }
 .cast-card .role { color: #b85c08; }
@@ -1832,12 +1848,10 @@ body {
 .page-intro { color: #756a61; }
 .team-grid { gap: 14px; background: transparent; border: 0; }
 .member, .prompt-card {
-  background: rgba(255,255,255,.62);
+  background: #ffffff;
   border: 1px solid rgba(255,255,255,.86);
   border-radius: 16px;
   box-shadow: 0 12px 34px rgba(72,55,38,.07);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 .member h2, .prompt-meta h3 { color: #382c25; font-family: var(--serif); font-weight: 600; }
 .member .role, .prompt-cat, .prompt-row dt { color: #b85c08; }
@@ -1953,7 +1967,7 @@ body {
 :root[data-theme="dark"] .cast-card,
 :root[data-theme="dark"] .member,
 :root[data-theme="dark"] .prompt-card {
-  background: rgba(43,39,36,.76);
+  background: #2b2724;
   border-color: rgba(255,255,255,.12);
   box-shadow: 0 12px 34px rgba(0,0,0,.18);
 }
